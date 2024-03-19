@@ -23,6 +23,27 @@ class IslaMicos extends StatelessWidget {
       throw 'No se pudo abrir el mapa.';
     }
   }
+  void _showFullScreenImage(BuildContext context, String imagePath) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          body: GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: Center(
+              child: InteractiveViewer(
+                panEnabled: false, // Prevent panning
+                boundaryMargin: EdgeInsets.all(100),
+                minScale: 0.5,
+                maxScale: 2,
+                child: Image.asset(imagePath),
+              ),
+            ),
+          ),
+          backgroundColor: Colors.black,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,6 +86,7 @@ class IslaMicos extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             informativeSection(
+              context,
               title: "Isla de los Micos",
               content:
               'La Isla de los Micos es un destino popular entre aquellos que visitan la región amazónica cerca de Leticia, Colombia. Esta isla ofrece una experiencia única de interacción con la naturaleza y la vida silvestre, particularmente con los monos ardilla, conocidos por su curiosidad y amabilidad hacia los humanos.\n',
@@ -75,6 +97,7 @@ class IslaMicos extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Actividades",
               content:
                 ' Los tours generalmente comienzan temprano en la mañana y permiten a los visitantes alimentar a los monos bajo supervisión, garantizando una interacción respetuosa con la vida silvestre. También suelen incluir recorridos por los ríos cercanos\n'
@@ -89,9 +112,25 @@ class IslaMicos extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Ubicación y Recomendación",
               content: 'Mejor Momento para Visitar: Los tours a la Isla de los Micos suelen comenzar temprano en la mañana cuando los monos están más activos y hay menos calor, lo que hace de esta parte del día el momento ideal para la visita.\n',
               imagePaths: [],
+            ),
+            Center(
+              child: Container(
+                margin: const EdgeInsets.only(top: 10.0, bottom: 20.0),
+                child: ElevatedButton(
+                  onPressed: _launchGoogleMaps,
+                  style: ElevatedButton.styleFrom(
+                    elevation: 2,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  child: const Text('Abrir en Google Maps'),
+                ),
+              ),
             ),
           ],
         ),
@@ -99,10 +138,10 @@ class IslaMicos extends StatelessWidget {
     );
   }
 
-  Widget informativeSection({
+  Widget informativeSection(BuildContext context, {
     required String title,
     required String content,
-    required List<String> imagePaths,
+    List<String> imagePaths = const [],
   }) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -119,49 +158,44 @@ class IslaMicos extends StatelessWidget {
             textAlign: TextAlign.justify,
             style: TextStyle(fontSize: 16),
           ),
-          if (title == "Ubicación y Recomendación") // Condición para añadir el botón solo en la sección "Cómo llegar"
-    Center(
-      child: ElevatedButton(
-              onPressed: _launchGoogleMaps,
-              child: const Text('Abrir en Google Maps'),
-            ),
-    ),
-          const SizedBox(height: 10),
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 200,
-              enlargeCenterPage: true,
-              autoPlay: false,
-              aspectRatio: 16 / 9,
-              enableInfiniteScroll: false,
-              viewportFraction: 0.8,
-            ),
-            items: imagePaths.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.50),
-                          spreadRadius: 0.5,
-                          blurRadius: 5,
-                          offset: const Offset(0, 10), // changes position of shadow
+          if (imagePaths.isNotEmpty)
+            CarouselSlider(
+              options: CarouselOptions(
+                height: 200,
+                enlargeCenterPage: true,
+                autoPlay: false,
+                aspectRatio: 16 / 9,
+                enableInfiniteScroll: false,
+                viewportFraction: 0.8,
+              ),
+              items: imagePaths.map((imagePath) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return GestureDetector(
+                      onTap: () => _showFullScreenImage(context, imagePath),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.50),
+                              spreadRadius: 0.5,
+                              blurRadius: 5,
+                              offset: const Offset(0, 10),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Image.asset(i, fit: BoxFit.cover),
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ),
-          const SizedBox(height: 20),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(imagePath, fit: BoxFit.cover),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
         ],
       ),
     );

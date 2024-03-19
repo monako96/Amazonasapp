@@ -23,6 +23,27 @@ class MundoAmazonico extends StatelessWidget {
       throw 'No se pudo abrir el mapa.';
     }
   }
+  void _showFullScreenImage(BuildContext context, String imagePath) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          body: GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: Center(
+              child: InteractiveViewer(
+                panEnabled: false, // Prevent panning
+                boundaryMargin: EdgeInsets.all(100),
+                minScale: 0.5,
+                maxScale: 2,
+                child: Image.asset(imagePath),
+              ),
+            ),
+          ),
+          backgroundColor: Colors.black,
+        ),
+      ),
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -65,9 +86,10 @@ class MundoAmazonico extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             informativeSection(
+              context,
               title: "Parque Ecológico Mundo Amazónico",
               content:
-              'es un destino educativo y recreativo situado cerca de Leticia, en la región amazónica de Colombia. Este parque ofrece a los visitantes la oportunidad de aprender sobre la rica biodiversidad del Amazonas, sus ecosistemas, y la importancia de la conservación ambiental a través de experiencias interactivas y didácticas.',
+              'es un destino educativo y recreativo situado cerca de Leticia, en la región amazónica de Colombia. Este parque ofrece a los visitantes la oportunidad de aprender sobre la rica biodiversidad del Amazonas, sus ecosistemas, y la importancia de la conservación ambiental a través de experiencias interactivas y didácticas. \n',
               imagePaths: [
                 "assets/paisajes/indigenas.jpg",
                 "assets/paisajes/cultura.jpg",
@@ -75,6 +97,7 @@ class MundoAmazonico extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Actividades",
               content:
                   '1. Recorridos Educativos'
@@ -90,11 +113,27 @@ class MundoAmazonico extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: 'Ubicación y Recomendación',
               content:
               'Preparación: Dado el clima húmedo y tropical del Amazonas, se recomienda llevar ropa ligera y cómoda, protector solar, repelente de insectos, y una botella de agua reutilizable. También es aconsejable usar calzado adecuado para caminar por senderos naturales. \n\n'
               'El Parque Ecológico Mundo Amazónico no solo es un lugar para el ocio y la educación, sino también un espacio que promueve la conciencia sobre la importancia de proteger uno de los ecosistemas más vitales y diversos del planeta. Visitar este parque es una experiencia enriquecedora que ofrece valiosas lecciones sobre el medio ambiente, la biodiversidad, y la sostenibilidad.\n',
               imagePaths: [],
+            ),
+            Center(
+              child: Container(
+                margin: const EdgeInsets.only(top: 10.0, bottom: 20.0),
+                child: ElevatedButton(
+                  onPressed: _launchGoogleMaps,
+                  style: ElevatedButton.styleFrom(
+                    elevation: 2,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                  ),
+                  child: const Text('Abrir en Google Maps'),
+                ),
+              ),
             ),
           ],
         ),
@@ -102,10 +141,10 @@ class MundoAmazonico extends StatelessWidget {
     );
   }
 
-  Widget informativeSection({
+  Widget informativeSection(BuildContext context, {
     required String title,
     required String content,
-    required List<String> imagePaths,
+    List<String> imagePaths = const [],
   }) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -122,49 +161,44 @@ class MundoAmazonico extends StatelessWidget {
             textAlign: TextAlign.justify,
             style: TextStyle(fontSize: 16),
           ),
-          if (title == "Ubicación y Recomendación") // Condición para añadir el botón solo en la sección "Cómo llegar"
-    Center(
-      child: ElevatedButton(
-              onPressed: _launchGoogleMaps,
-              child: const Text('Abrir en Google Maps'),
-            ),
-    ),
-          const SizedBox(height: 10),
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 200,
-              enlargeCenterPage: true,
-              autoPlay: false,
-              aspectRatio: 16 / 9,
-              enableInfiniteScroll: false,
-              viewportFraction: 0.8,
-            ),
-            items: imagePaths.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.50),
-                          spreadRadius: 0.5,
-                          blurRadius: 5,
-                          offset: const Offset(0, 10), // changes position of shadow
+          if (imagePaths.isNotEmpty)
+            CarouselSlider(
+              options: CarouselOptions(
+                height: 200,
+                enlargeCenterPage: true,
+                autoPlay: false,
+                aspectRatio: 16 / 9,
+                enableInfiniteScroll: false,
+                viewportFraction: 0.8,
+              ),
+              items: imagePaths.map((imagePath) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return GestureDetector(
+                      onTap: () => _showFullScreenImage(context, imagePath),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.50),
+                              spreadRadius: 0.5,
+                              blurRadius: 5,
+                              offset: const Offset(0, 10),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Image.asset(i, fit: BoxFit.cover),
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ),
-          const SizedBox(height: 20),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(imagePath, fit: BoxFit.cover),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
         ],
       ),
     );
