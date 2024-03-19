@@ -9,6 +9,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/67efaa22ae0dd6bf0de2d01edf603ca6/transformed/browser-1.4.0/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.browser/browser/1.4.0/2a2741f63427dcdb3b6821dd17703bc16ced13a1/browser-1.4.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

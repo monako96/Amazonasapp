@@ -27,8 +27,8 @@ class MoreScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text("Puedes contactarnos a través de:"),
-                          Text("Email: contacto@example.com"),
-                          Text("Teléfono: +123 456 7890"),
+                          Text("Email: gregorio.cubeo@uniminuto.edu.co"),
+                          Text("Teléfono: +57 3202240985"),
                           // Añade más información de contacto si es necesario
                         ],
                       ),
@@ -44,14 +44,51 @@ class MoreScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Versión de la app: 1.0.0"),
-                          Text("Desarrollado por: Tu Nombre o Empresa"),
+                          Text("Versión de la app: 1.0.0\n"),
+                          Text("Desarrollado por: Gregorio cubeo, Julian porras\n"
+                              "lugar:Villavicencio-Metas\n"
+                              "Universidad Minuto de Dios"),
                           // Añade más detalles acerca de la app
                         ],
                       ),
                     ),
                   ],
                 ),
+                ExpansionTile(
+                  leading: Icon(Icons.privacy_tip),
+                  title: Text('Política y privacidad'),
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Introducción\n\n"
+                                "En AMCOL TOURS, respetamos tu privacidad y estamos comprometidos con proteger la información personal que nos proporcionas. Esta política explica cómo usamos y protegemos tus datos al utilizar nuestra aplicación móvil.\n\n"
+                                "Recopilación de Datos\n\n"
+                                "Solo recopilamos tu dirección de correo electrónico y nombre de usuario al iniciar sesión con Gmail para publicar comentarios en nuestra aplicación. No recopilamos más información personal que la estrictamente necesaria para este propósito.\n\n"
+                                "Uso de Datos\n\n"
+                                "Utilizamos tu información para:\n"
+                                "- Permitirte publicar comentarios en la aplicación.\n"
+                                "- Contactarte con actualizaciones importantes de la aplicación o respuestas a tus comentarios, si es necesario.\n\n"
+                                "Compartir Datos\n\n"
+                                "No compartimos tu información personal con terceros, excepto para cumplir con leyes aplicables o proteger nuestros derechos.\n\n"
+                                "Seguridad\n\n"
+                                "Tomamos medidas para proteger tu información contra acceso no autorizado, alteración o destrucción.\n\n"
+                                "Cambios a Esta Política\n\n"
+                                "Podemos actualizar nuestra Política de Privacidad ocasionalmente. Te recomendamos revisar esta página periódicamente para cualquier cambio.\n\n"
+                                "Contacto\n\n"
+                                "Si tienes preguntas sobre esta política, contáctanos en gregorio.cubeo@uniminuto.edu.co. o al 3202240985 ",
+                            textAlign: TextAlign.justify,
+                          ),
+                          // Añade más detalles acerca de la app si es necesario
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+
               ],
             ),
           ),
@@ -62,16 +99,16 @@ class MoreScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 CircleAvatar(
-                  radius: 40,
-                  backgroundImage: AssetImage('assets/paisajes/choza.jpg'),
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/amcol.png'),
                 ),
                 CircleAvatar(
-                  radius: 40,
-                  backgroundImage: AssetImage('assets/paisajes/cultura.jpg'),
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/logoamazonas.png'),
                 ),
                 CircleAvatar(
-                  radius: 40,
-                  backgroundImage: AssetImage('assets/paisajes/indigenas.jpg'),
+                  radius: 50,
+                  backgroundImage: AssetImage('assets/images/uniminuto.jpg'),
                 ),
               ],
             ),

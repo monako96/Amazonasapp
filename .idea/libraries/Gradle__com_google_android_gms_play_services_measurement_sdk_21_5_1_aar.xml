@@ -4,7 +4,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/8faf65d59ba8a5fe3d1bf911b88f61ba/transformed/jetified-play-services-measurement-sdk-21.5.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/8faf65d59ba8a5fe3d1bf911b88f61ba/transformed/jetified-play-services-measurement-sdk-21.5.1/AndroidManifest.xml" />
     </CLASSES>
-    <JAVADOC />
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.gms/play-services-measurement-sdk/21.5.1/fb10b466d50fe41dab56aaf738339ac74fe027f/play-services-measurement-sdk-21.5.1-javadoc.jar!/" />
+    </JAVADOC>
     <SOURCES />
   </library>
 </component>

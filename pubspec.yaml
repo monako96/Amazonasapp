@@ -92,6 +92,10 @@ flutter:
     - assets/paisajes/mono.jpg
     - assets/images/360image.jpg
     - assets/google.png
+    - assets/images/uniminuto.jpg
+    - assets/images/logoamazonas.png
+    - assets/images/amcol.png
+
     #---------------------------------------------------------
      #imagenes tres fronteras
     - assets/AmazonasPh/TresFronteras/1.jpg

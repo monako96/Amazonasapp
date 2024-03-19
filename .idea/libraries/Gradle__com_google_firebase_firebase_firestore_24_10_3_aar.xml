@@ -5,6 +5,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/a7d096bbfc5ec15742934f05ab0fa636/transformed/jetified-firebase-firestore-24.10.3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-firestore/24.10.3/5aedf0a31bb940816398d1100d727e159b3180fa/firebase-firestore-24.10.3-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

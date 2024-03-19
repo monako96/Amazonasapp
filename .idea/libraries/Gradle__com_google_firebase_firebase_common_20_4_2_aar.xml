@@ -6,6 +6,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d882a7a4d66334b44576aae15cf48ee8/transformed/jetified-firebase-common-20.4.2/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.firebase/firebase-common/20.4.2/18d8426510963901cbbf93c73edf191e7b831a5c/firebase-common-20.4.2-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

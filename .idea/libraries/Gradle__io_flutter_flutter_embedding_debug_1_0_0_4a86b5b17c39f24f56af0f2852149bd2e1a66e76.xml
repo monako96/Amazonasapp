@@ -5,6 +5,8 @@
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.flutter/flutter_embedding_debug/1.0.0-4a86b5b17c39f24f56af0f2852149bd2e1a66e76/d91c478f5d5afdd06549fb25371652a6967aa7fa/flutter_embedding_debug-1.0.0-4a86b5b17c39f24f56af0f2852149bd2e1a66e76.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.flutter/flutter_embedding_debug/1.0.0-4a86b5b17c39f24f56af0f2852149bd2e1a66e76/4daaddd6c8c2bfb559d4c6628cbb9288ae0551a8/flutter_embedding_debug-1.0.0-4a86b5b17c39f24f56af0f2852149bd2e1a66e76-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>

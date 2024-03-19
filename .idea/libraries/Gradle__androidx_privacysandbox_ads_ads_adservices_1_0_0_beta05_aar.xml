@@ -6,6 +6,8 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/b28ed0fe3b79c7a9ae3423455b02b3aa/transformed/jetified-ads-adservices-1.0.0-beta05/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.privacysandbox.ads/ads-adservices/1.0.0-beta05/d1bee637614b7927092da068ca8122ab85f3fd05/ads-adservices-1.0.0-beta05-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
