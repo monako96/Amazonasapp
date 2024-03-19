@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "959885436134",
+    "project_id": "appas-a4b22",
+    "storage_bucket": "appas-a4b22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:959885436134:android:71a19f51e53541eca30727",
+        "android_client_info": {
+          "package_name": "com.example.appamazonas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "959885436134-0ar33s8act8r07t4vdoc5odma8ig53se.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDB-c1nnN9wzpE3ITyDZ3Qf3bBQjTUjjRw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "959885436134-0ar33s8act8r07t4vdoc5odma8ig53se.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "959885436134-35tcn3go7fqvfq2j2a8ct80oi6ubke42.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.appamazonas"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
