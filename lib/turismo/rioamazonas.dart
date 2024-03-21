@@ -4,6 +4,29 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 class RioAmazonas extends StatelessWidget {
   const RioAmazonas({super.key});
+
+  void _showFullScreenImage(BuildContext context, String imagePath) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          body: GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: Center(
+              child: InteractiveViewer(
+                panEnabled: false, // Prevent panning
+                boundaryMargin: EdgeInsets.all(100),
+                minScale: 0.5,
+                maxScale: 2,
+                child: Image.asset(imagePath),
+              ),
+            ),
+          ),
+          backgroundColor: Colors.black,
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,6 +69,7 @@ class RioAmazonas extends StatelessWidget {
             ),
             const SizedBox(height: 20),
             informativeSection(
+              context,
               title: "Leticia - Amazonas",
               content:
                   'Leticia es la capital del departamento de Amazonas en Colombia, '
@@ -61,6 +85,7 @@ class RioAmazonas extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Historia y Cultura",
               content:
                   "Explora la rica historia de Leticia y la diversidad cultural de sus pueblos indígenas. Descubre tradiciones ancestrales y la armonía con la naturaleza.",
@@ -71,6 +96,7 @@ class RioAmazonas extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Biodiversidad",
               content:
                   "Admira la impresionante biodiversidad del Amazonas. Desde avistamiento de aves hasta encuentros cercanos con la fauna silvestre, Leticia es un paraíso para los amantes de la naturaleza.",
@@ -81,6 +107,7 @@ class RioAmazonas extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Actividades Turísticas",
               content:
                   "Desde caminatas ecológicas hasta cruceros por el río Amazonas, Leticia ofrece una amplia gama de actividades turísticas para aventureros y familias.",
@@ -91,6 +118,7 @@ class RioAmazonas extends StatelessWidget {
               ],
             ),
             informativeSection(
+              context,
               title: "Consejos de Viaje",
               content:
                   "Prepárate para tu viaje a Leticia con consejos útiles sobre cómo llegar, qué llevar y cómo hacer de tu estancia una experiencia inolvidable.",
@@ -106,10 +134,10 @@ class RioAmazonas extends StatelessWidget {
     );
   }
 
-  Widget informativeSection({
+  Widget informativeSection(BuildContext context, {
     required String title,
     required String content,
-    required List<String> imagePaths,
+    List<String> imagePaths = const [],
   }) {
     return Padding(
       padding: const EdgeInsets.all(16.0),
@@ -120,48 +148,50 @@ class RioAmazonas extends StatelessWidget {
             title,
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Text(
             content,
             textAlign: TextAlign.justify,
             style: TextStyle(fontSize: 16),
           ),
-          SizedBox(height: 10),
-          CarouselSlider(
-            options: CarouselOptions(
-              height: 200,
-              enlargeCenterPage: true,
-              autoPlay: false,
-              aspectRatio: 16 / 9,
-              enableInfiniteScroll: false,
-              viewportFraction: 0.9,
-            ),
-            items: imagePaths.map((i) {
-              return Builder(
-                builder: (BuildContext context) {
-                  return Container(
-                    width: MediaQuery.of(context).size.width,
-                    margin: EdgeInsets.symmetric(horizontal: 5.0),
-                    decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.50),
-                          spreadRadius: 0.5,
-                          blurRadius: 5,
-                          offset: Offset(0, 10), // changes position of shadow
+          if (imagePaths.isNotEmpty)
+            CarouselSlider(
+              options: CarouselOptions(
+                height: 200,
+                enlargeCenterPage: true,
+                autoPlay: false,
+                aspectRatio: 16 / 9,
+                enableInfiniteScroll: false,
+                viewportFraction: 0.8,
+              ),
+              items: imagePaths.map((imagePath) {
+                return Builder(
+                  builder: (BuildContext context) {
+                    return GestureDetector(
+                      onTap: () => _showFullScreenImage(context, imagePath),
+                      child: Container(
+                        width: MediaQuery.of(context).size.width,
+                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.black.withOpacity(0.50),
+                              spreadRadius: 0.5,
+                              blurRadius: 5,
+                              offset: const Offset(0, 10),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(8),
-                      child: Image.asset(i, fit: BoxFit.cover),
-                    ),
-                  );
-                },
-              );
-            }).toList(),
-          ),
-          SizedBox(height: 20),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(8),
+                          child: Image.asset(imagePath, fit: BoxFit.cover),
+                        ),
+                      ),
+                    );
+                  },
+                );
+              }).toList(),
+            ),
         ],
       ),
     );

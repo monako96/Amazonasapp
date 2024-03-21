@@ -10,12 +10,12 @@ class ArtesaniaAmazonas extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Artesanias',
+        title: const Text(
+          'Artesanías',
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color.fromARGB(255, 0, 59, 31),
-        iconTheme: IconThemeData(
+        backgroundColor: const Color.fromARGB(255, 0, 59, 31),
+        iconTheme: const IconThemeData(
           color: Colors.white,
         ),
       ),
@@ -26,41 +26,66 @@ class ArtesaniaAmazonas extends StatelessWidget {
         mainAxisSpacing: 10,
         padding: const EdgeInsets.all(10),
         children: <Widget>[
-          _buildGridItem('assets/paisajes/mono.jpg', 'Sitio Turístico 1'),
-          _buildGridItem('assets/paisajes/brasil.jpg', 'Sitio Turístico 2'),
-          _buildGridItem('assets/paisajes/choza.jpg', 'Sitio Turístico 3'),
-          _buildGridItem('assets/paisajes/cultura.jpg', 'Sitio Turístico 4'),
-          _buildGridItem('assets/paisajes/indigenas.jpg', 'Sitio Turístico 5'),
-          _buildGridItem('assets/paisajes/pesca.jpg', 'Sitio Turístico 6'),
-          _buildGridItem('assets/paisajes/rio.jpg', 'Sitio Turístico 7'),
-          _buildGridItem('assets/paisajes/cultura.jpg', 'Sitio Turístico 8'),
+          _buildGridItem(context, 'assets/paisajes/mono.jpg', 'Sitio Turístico 1'),
+          _buildGridItem(context, 'assets/paisajes/brasil.jpg', 'Sitio Turístico 2'),
+          _buildGridItem(context, 'assets/paisajes/choza.jpg', 'Sitio Turístico 3'),
+          _buildGridItem(context, 'assets/paisajes/cultura.jpg', 'Sitio Turístico 4'),
+          _buildGridItem(context, 'assets/paisajes/indigenas.jpg', 'Sitio Turístico 5'),
+          _buildGridItem(context, 'assets/paisajes/pesca.jpg', 'Sitio Turístico 6'),
+          _buildGridItem(context, 'assets/paisajes/rio.jpg', 'Sitio Turístico 7'),
+          _buildGridItem(context, 'assets/paisajes/cultura.jpg', 'Sitio Turístico 8'),
         ],
       ),
     );
   }
 
-  Widget _buildGridItem(String imagePath, String title) {
-    return Card(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Expanded(
-            child: AspectRatio(
-              aspectRatio: 1.0,
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.cover,
+  Widget _buildGridItem(BuildContext context, String imagePath, String title) {
+    return GestureDetector(
+      onTap: () => _showFullScreenImage(context, imagePath),
+      child: Card(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Expanded(
+              child: AspectRatio(
+                aspectRatio: 1.0,
+                child: Image.asset(
+                  imagePath,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                title,
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _showFullScreenImage(BuildContext context, String imagePath) {
+    Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (context) => Scaffold(
+          backgroundColor: Colors.black,
+          body: GestureDetector(
+            onTap: () => Navigator.of(context).pop(),
+            child: Center(
+              child: InteractiveViewer(
+                panEnabled: false, // Prevent panning
+                boundaryMargin: const EdgeInsets.all(100),
+                minScale: 0.5,
+                maxScale: 2,
+                child: Image.asset(imagePath),
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              title,
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
