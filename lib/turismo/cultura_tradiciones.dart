@@ -77,8 +77,8 @@ class CulturaTradiciones extends StatelessWidget {
                   'culturas tanto tradicionales como locales.',
               imagePaths: [
                 "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aves/33.jpg",
+
               ],
             ),
             informativeSection(
