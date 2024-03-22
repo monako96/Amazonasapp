@@ -113,6 +113,11 @@ flutter:
     - assets/AmazonasPh/TresFronteras/portada.jpg
     - assets/AmazonasPh/TresFronteras/13.jpg
     - assets/AmazonasPh/TresFronteras/14.jpg
+    - assets/AmazonasPh/TresFronteras/15.jpg
+    - assets/AmazonasPh/TresFronteras/16.jpg
+    - assets/AmazonasPh/TresFronteras/17.jpg
+    - assets/AmazonasPh/TresFronteras/18.jpg
+
     #---------------------------------------------
     #portadas
     - assets/AmazonasPh/portadas/loros.png
@@ -126,6 +131,121 @@ flutter:
     - assets/AmazonasPh/aventurasenlaselva/cocodrillo.jpg
     - assets/AmazonasPh/aventurasenlaselva/rana.jpg
     - assets/AmazonasPh/aventurasenlaselva/serpiente.jpg
+    - assets/AmazonasPh/aventurasenlaselva/victoria.jpg
+    - assets/AmazonasPh/aventurasenlaselva/1.jpg
+    - assets/AmazonasPh/aventurasenlaselva/2.jpg
+    - assets/AmazonasPh/aventurasenlaselva/3.jpg
+    - assets/AmazonasPh/aventurasenlaselva/4.jpg
+    - assets/AmazonasPh/aventurasenlaselva/5.jpg
+    - assets/AmazonasPh/aventurasenlaselva/6.jpg
+    - assets/AmazonasPh/aventurasenlaselva/7.jpg
+    - assets/AmazonasPh/aventurasenlaselva/8.jpg
+    - assets/AmazonasPh/aventurasenlaselva/9.jpg
+    - assets/AmazonasPh/aventurasenlaselva/10.jpg
+    - assets/AmazonasPh/aventurasenlaselva/11.jpg
+    - assets/AmazonasPh/aventurasenlaselva/12.jpg
+    - assets/AmazonasPh/aventurasenlaselva/13.jpg
+    - assets/AmazonasPh/aventurasenlaselva/14.jpg
+    - assets/AmazonasPh/aventurasenlaselva/15.jpg
+    - assets/AmazonasPh/aventurasenlaselva/16.jpg
+    - assets/AmazonasPh/aventurasenlaselva/17.jpg
+    - assets/AmazonasPh/aventurasenlaselva/18.jpg
+    - assets/AmazonasPh/aventurasenlaselva/19.jpg
+    - assets/AmazonasPh/aventurasenlaselva/20.jpg
+
+
+    #parque loros img
+    - assets/AmazonasPh/ParqueLoros/1.jpg
+    - assets/AmazonasPh/ParqueLoros/2.jpg
+    - assets/AmazonasPh/ParqueLoros/3.jpg
+    - assets/AmazonasPh/ParqueLoros/4.jpg
+    - assets/AmazonasPh/ParqueLoros/5.jpg
+    - assets/AmazonasPh/ParqueLoros/6.jpg
+    - assets/AmazonasPh/ParqueLoros/7.jpg
+    - assets/AmazonasPh/ParqueLoros/8.jpg
+    - assets/AmazonasPh/ParqueLoros/9.jpg
+    - assets/AmazonasPh/ParqueLoros/10.jpg
+    - assets/AmazonasPh/ParqueLoros/11.jpg
+
+    # aves
+    - assets/AmazonasPh/aves/1.jpg
+    - assets/AmazonasPh/aves/2.jpg
+    - assets/AmazonasPh/aves/3.jpg
+    - assets/AmazonasPh/aves/4.jpg
+    - assets/AmazonasPh/aves/5.jpg
+    - assets/AmazonasPh/aves/6.jpg
+    - assets/AmazonasPh/aves/7.jpg
+    - assets/AmazonasPh/aves/8.jpg
+    - assets/AmazonasPh/aves/9.jpg
+    - assets/AmazonasPh/aves/10.jpg
+    - assets/AmazonasPh/aves/11.jpg
+    - assets/AmazonasPh/aves/12.jpg
+    - assets/AmazonasPh/aves/13.jpg
+    - assets/AmazonasPh/aves/14.jpg
+    - assets/AmazonasPh/aves/15.jpg
+    - assets/AmazonasPh/aves/16.jpg
+    - assets/AmazonasPh/aves/17.jpg
+    - assets/AmazonasPh/aves/18.jpg
+    - assets/AmazonasPh/aves/19.jpg
+    - assets/AmazonasPh/aves/20.jpg
+    - assets/AmazonasPh/aves/21.jpg
+    - assets/AmazonasPh/aves/22.jpg
+    - assets/AmazonasPh/aves/23.jpg
+    - assets/AmazonasPh/aves/24.jpg
+    - assets/AmazonasPh/aves/25.jpg
+    - assets/AmazonasPh/aves/26.jpg
+    - assets/AmazonasPh/aves/27.jpg
+    - assets/AmazonasPh/aves/28.jpg
+    - assets/AmazonasPh/aves/29.jpg
+    - assets/AmazonasPh/aves/30.jpg
+    - assets/AmazonasPh/aves/31.jpg
+    - assets/AmazonasPh/aves/32.jpg
+    - assets/AmazonasPh/aves/33.jpg
+    - assets/AmazonasPh/aves/34.jpg
+    - assets/AmazonasPh/aves/35.jpg
+    - assets/AmazonasPh/aves/36.jpg
+
+      #rios
+    - assets/AmazonasPh/Rio/1.jpg
+    - assets/AmazonasPh/Rio/2.jpg
+    - assets/AmazonasPh/Rio/3.jpg
+    - assets/AmazonasPh/Rio/4.jpg
+    - assets/AmazonasPh/Rio/5.jpg
+    - assets/AmazonasPh/Rio/6.jpg
+    - assets/AmazonasPh/Rio/7.jpg
+    - assets/AmazonasPh/Rio/8.jpg
+    - assets/AmazonasPh/Rio/9.jpg
+    - assets/AmazonasPh/Rio/10.jpg
+    - assets/AmazonasPh/Rio/11.jpg
+    - assets/AmazonasPh/Rio/12.jpg
+
+    #Pto narino
+    - assets/AmazonasPh/puertonarino/1.jpg
+    - assets/AmazonasPh/puertonarino/2.jpg
+    - assets/AmazonasPh/puertonarino/3.jpg
+    - assets/AmazonasPh/puertonarino/4.jpg
+    - assets/AmazonasPh/puertonarino/5.jpg
+    - assets/AmazonasPh/puertonarino/6.jpg
+    - assets/AmazonasPh/puertonarino/7.jpg
+    - assets/AmazonasPh/puertonarino/8.jpg
+    - assets/AmazonasPh/puertonarino/10.jpg
+    - assets/AmazonasPh/puertonarino/11.jpg
+    - assets/AmazonasPh/puertonarino/12.jpg
+    - assets/AmazonasPh/puertonarino/13.jpg
+    - assets/AmazonasPh/puertonarino/14.jpg
+    - assets/AmazonasPh/puertonarino/15.jpg
+    - assets/AmazonasPh/puertonarino/16.jpg
+    - assets/AmazonasPh/puertonarino/17.jpg
+    - assets/AmazonasPh/puertonarino/18.jpg
+    - assets/AmazonasPh/puertonarino/19.jpg
+    - assets/AmazonasPh/puertonarino/20.jpg
+    - assets/AmazonasPh/puertonarino/21.jpg
+    - assets/AmazonasPh/puertonarino/22.jpg
+    - assets/AmazonasPh/puertonarino/23.jpg
+    - assets/AmazonasPh/puertonarino/24.jpg
+    - assets/AmazonasPh/puertonarino/26.jpg
+    - assets/AmazonasPh/puertonarino/27.jpg
+
 
 
 

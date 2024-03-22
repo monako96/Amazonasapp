@@ -45,7 +45,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/ParqueLoros/8.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -78,54 +78,43 @@ class DescubreLeticiaScreen extends StatelessWidget {
                   'avistamiento de fauna y flora, y la oportunidad de experimentar '
                   'las culturas indígenas locales. \n',
               imagePaths: [
+                'assets/AmazonasPh/TresFronteras/2.jpg',
+                'assets/AmazonasPh/aventurasenlaselva/3.jpg',
                 "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                'assets/AmazonasPh/aventurasenlaselva/1.jpg',
+                'assets/AmazonasPh/aventurasenlaselva/2.jpg',
+
               ],
             ),
             informativeSection(
               context,
-              title: "Historia y Cultura",
+              title: "Información General",
               content:
-                  "Explora la rica historia de Leticia y la diversidad cultural de sus pueblos indígenas. Descubre tradiciones ancestrales y la armonía con la naturaleza.\n",
+                 'Ubicación: Leticia se encuentra en la triple frontera entre Colombia, Brasil y Perú, a orillas del río Amazonas.\n\n'
+                ' Población: Aproximadamente 54,927habitantes.\n\n'
+                'Clima: Tropical húmedo, con temperaturas promedio que varían entre 26°C y 30°C durante todo el año. La estación lluviosa es de diciembre a mayo, mientras que los meses más secos van de junio a noviembre.\n',
+
+            ),
+            informativeSection(
+              context,
+              title: "Cómo Llegar",
+              content:
+                'Leticia es accesible principalmente por aire, con vuelos directos desde Bogotá al Aeropuerto Internacional Alfredo Vásquez Cobo. Debido a su ubicación geográfica, Leticia no tiene conexiones terrestres con el resto de Colombia, lo que hace que el transporte aéreo sea la principal vía de acceso.\n\n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/TresFronteras/17.jpg",
+                "assets/AmazonasPh/TresFronteras/18.jpg",
+                "assets/AmazonasPh/TresFronteras/14.jpg",
+                'assets/AmazonasPh/TresFronteras/4.jpg',
               ],
             ),
             informativeSection(
               context,
-              title: "Biodiversidad",
+              title: "Recomendaciones para Visitantes",
               content:
-                  "Admira la impresionante biodiversidad del Amazonas. Desde avistamiento de aves hasta encuentros cercanos con la fauna silvestre, Leticia es un paraíso para los amantes de la naturaleza.\n",
-              imagePaths: [
-                "assets/paisajes/mono.jpg",
-                "assets/paisajes/pesca.jpg",
-                "assets/paisajes/rio.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Actividades Turísticas",
-              content:
-                  "Desde caminatas ecológicas hasta cruceros por el río Amazonas, Leticia ofrece una amplia gama de actividades turísticas para aventureros y familias.\n",
-              imagePaths: [
-                "assets/paisajes/rio.jpg",
-                "assets/paisajes/pesca.jpg",
-                "assets/paisajes/indigenas.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Consejos de Viaje",
-              content:
-                  "Prepárate para tu viaje a Leticia con consejos útiles sobre cómo llegar, qué llevar y cómo hacer de tu estancia una experiencia inolvidable.\n",
-              imagePaths: [
-                "assets/paisajes/choza.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-              ],
+                'Preparación: Dada su ubicación en la selva tropical, es esencial venir preparado con repelente de insectos, ropa ligera y adecuada para el clima húmedo, y protección solar.\n\n'
+              'Vacunas: Se recomienda estar vacunado contra la fiebre amarilla antes de visitar Leticia, así como tener precauciones contra la malaria.\n\n'
+              'Respeto por la Cultura y la Naturaleza: Al visitar comunidades indígenas y reservas naturales, es crucial mostrar respeto por las tradiciones locales y la biodiversidad. Sigue las normas de sostenibilidad y conservación.\n',
+
             ),
           ],
         ),

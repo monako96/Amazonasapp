@@ -12,7 +12,6 @@ import 'package:appamazonas/turismo/cultura_tradiciones.dart';
 import 'package:appamazonas/turismo/gastronomia.dart';
 
 import '../sitiosturisticos/sitios_turisticos.dart';
-// Importa aquí las demás pantallas para cada categoría
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -194,7 +193,7 @@ class CategoryGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     List<Map<String, dynamic>> categories = [
       {
-        "image": "assets/paisajes/brasil.jpg",
+        "image": "assets/AmazonasPh/ParqueLoros/8.jpg",
         "title": "Descubre Leticia",
         "onTap": () => Navigator.push(
             context,
