@@ -209,7 +209,7 @@ class CategoryGrid extends StatelessWidget {
                 builder: (context) => const AventurasSelvaScreen())),
       },
       {
-        "image": "assets/paisajes/pesca.jpg",
+        "image": "assets/paisajes/indigenas.jpg",
         "title": "Cultura y Tradiciones",
         "onTap": () => Navigator.push(
             context,

@@ -76,8 +76,13 @@ class CulturaTradiciones extends StatelessWidget {
                   'fusiona sabores de la triple frontera, se celebran festivales donde comparten diversas '
                   'culturas tanto tradicionales como locales.',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/AmazonasPh/aves/33.jpg",
+                'assets/AmazonasPh/TresFronteras/19.jpg',
+                'assets/AmazonasPh/TresFronteras/2.jpg',
+                'assets/AmazonasPh/TresFronteras/21.jpg',
+                'assets/AmazonasPh/TresFronteras/20.jpg',
+                'assets/AmazonasPh/TresFronteras/8.jpg',
+                'assets/AmazonasPh/TresFronteras/16.jpg',
+                'assets/AmazonasPh/TresFronteras/12.jpg',
 
               ],
             ),
