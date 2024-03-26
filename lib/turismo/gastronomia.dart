@@ -69,14 +69,9 @@ class GastronomiaAmazonas extends StatelessWidget {
             const SizedBox(height: 20),
             informativeSection(
               context,
-              title: "Leticia - Amazonas",
+              title: "Gastronomia Amazonica",
               content:
-                  'Leticia es la capital del departamento de Amazonas en Colombia, '
-                  'ubicada en la triple frontera entre Colombia, Perú y Brasil. '
-                  'Es conocida por ser una puerta de entrada al Amazonas, '
-                  'ofreciendo una gran variedad de actividades ecoturísticas, '
-                  'avistamiento de fauna y flora, y la oportunidad de experimentar '
-                  'las culturas indígenas locales.',
+                  'La gastronomía amazónica es un reflejo de la rica biodiversidad de la selva y las tradiciones culturales de sus pueblos indígenas y comunidades locales. Esta cocina se caracteriza por el uso de ingredientes frescos, exóticos y a menudo únicos de la región, ofreciendo sabores que no se encuentran en ninguna otra parte del mundo. \n',
               imagePaths: [
                 "assets/paisajes/indigenas.jpg",
                 "assets/paisajes/cultura.jpg",
@@ -85,46 +80,23 @@ class GastronomiaAmazonas extends StatelessWidget {
             ),
             informativeSection(
               context,
-              title: "Historia y Cultura",
+              title: "Platos principales",
               content:
-                  "Explora la rica historia de Leticia y la diversidad cultural de sus pueblos indígenas. Descubre tradiciones ancestrales y la armonía con la naturaleza.",
+              'En Leticia, Amazonas, la gastronomía refleja la rica biodiversidad de la selva y la fusión de culturas indígenas, colombianas, brasileñas y peruanas. Aquí te presento algunos de los platos principales que puedes degustar en Leticia, ofreciendo una muestra de la rica paleta de sabores amazónicos:\n'
+                  '\n 1. Pescados de Río'
+                  '\n\n 2. chicharrón de pirarucú'
+                  '\n\n 3. beiju\n\n'
+                  ' 3. Tacacho\n\n'
+                  '\n\n 3. beiju\n\n'
+
+
+                  'La Isla de los Micos se encuentra aproximadamente a 30 minutos en bote desde Leticia, dependiendo de las condiciones del río y del tipo de embarcación.\n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Biodiversidad",
-              content:
-                  "Admira la impresionante biodiversidad del Amazonas. Desde avistamiento de aves hasta encuentros cercanos con la fauna silvestre, Leticia es un paraíso para los amantes de la naturaleza.",
-              imagePaths: [
-                "assets/paisajes/mono.jpg",
-                "assets/paisajes/pesca.jpg",
-                "assets/paisajes/rio.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Actividades Turísticas",
-              content:
-                  "Desde caminatas ecológicas hasta cruceros por el río Amazonas, Leticia ofrece una amplia gama de actividades turísticas para aventureros y familias.",
-              imagePaths: [
-                "assets/paisajes/rio.jpg",
-                "assets/paisajes/pesca.jpg",
-                "assets/paisajes/indigenas.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Consejos de Viaje",
-              content:
-                  "Prepárate para tu viaje a Leticia con consejos útiles sobre cómo llegar, qué llevar y cómo hacer de tu estancia una experiencia inolvidable.",
-              imagePaths: [
-                "assets/paisajes/choza.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
+                "assets/AmazonasPh/aves/39.jpg",
+                "assets/AmazonasPh/aves/13.jpg",
+                "assets/AmazonasPh/aves/14.jpg",
+                "assets/AmazonasPh/aves/17.jpg",
+                "assets/AmazonasPh/aves/16.jpg",
               ],
             ),
           ],

@@ -91,7 +91,7 @@ class CategoriesSection extends StatelessWidget {
             imagePath: 'assets/paisajes/cultura.jpg',
             title: 'Cultura',
             onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const TourismScreen())),
+                MaterialPageRoute(builder: (context) => const CulturaTradiciones())),
           ),
           CategoryItem(
             imagePath: 'assets/paisajes/pesca.jpg',
@@ -217,7 +217,7 @@ class CategoryGrid extends StatelessWidget {
                 builder: (context) => const CulturaTradiciones())),
       },
       {
-        "image": "assets/paisajes/choza.jpg",
+        "image": "assets/AmazonasPh/aves/34.jpg",
         "title": "Gastronomía Amazónica",
         "onTap": () => Navigator.push(
             context,
@@ -225,7 +225,7 @@ class CategoryGrid extends StatelessWidget {
                 builder: (context) => const GastronomiaAmazonas())),
       },
       {
-        "image": "assets/paisajes/rio.jpg",
+        "image": "assets/AmazonasPh/TresFronteras/1.jpg",
         "title": "Tours por el Río Amazonas",
         "onTap": () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => const RioAmazonas())),

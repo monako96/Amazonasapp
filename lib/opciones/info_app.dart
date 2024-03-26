@@ -55,6 +55,28 @@ class MoreScreen extends StatelessWidget {
                   ],
                 ),
                 ExpansionTile(
+                  leading: Icon(Icons.image),
+                  title: Text('Créditos de las Imágenes'),
+                  children: <Widget>[
+                    Padding(
+                      padding: const EdgeInsets.all(16.0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Todas las imágenes utilizadas en [Nombre de la Aplicación] son propiedad de sus respectivos dueños y se utilizan bajo permiso. Los créditos de las imágenes son los siguientes:\n\n"
+                                "- Imágenes proporcionadas por Camilofilm Studio. Todos los derechos reservados.\n"
+                                "- Imágenes proporcionadas por Jangada Tours. Todos los derechos reservados.\n\n"
+                                "El uso de estas imágenes sin el consentimiento expreso de los propietarios está estrictamente prohibido.",
+                            textAlign: TextAlign.justify,
+                          ),
+                          // Añade más detalles o créditos de imágenes si es necesario
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                ExpansionTile(
                   leading: Icon(Icons.privacy_tip),
                   title: Text('Política y privacidad'),
                   children: <Widget>[
@@ -83,28 +105,6 @@ class MoreScreen extends StatelessWidget {
                             textAlign: TextAlign.justify,
                           ),
                           // Añade más detalles acerca de la app si es necesario
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                ExpansionTile(
-                  leading: Icon(Icons.image),
-                  title: Text('Créditos de las Imágenes'),
-                  children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Todas las imágenes utilizadas en [Nombre de la Aplicación] son propiedad de sus respectivos dueños y se utilizan bajo permiso. Los créditos de las imágenes son los siguientes:\n\n"
-                                "- Imágenes proporcionadas por Camilofilm Studio. Todos los derechos reservados.\n"
-                                "- Imágenes proporcionadas por Jangada Tours. Todos los derechos reservados.\n\n"
-                                "El uso de estas imágenes sin el consentimiento expreso de los propietarios está estrictamente prohibido.",
-                            textAlign: TextAlign.justify,
-                          ),
-                          // Añade más detalles o créditos de imágenes si es necesario
                         ],
                       ),
                     ),
