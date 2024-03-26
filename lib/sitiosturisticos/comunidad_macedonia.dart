@@ -64,7 +64,7 @@ class ComunidadMacedonia extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/aves/2.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -93,9 +93,9 @@ class ComunidadMacedonia extends StatelessWidget {
                   'es un importante destino cultural y ecológico situado en la región amazónica de Colombia, cerca de Leticia. Esta comunidad pertenece principalmente al grupo étnico Tikuna, uno de los pueblos indígenas más grandes de la Amazonía. Visitar Macedonia permite a los viajeros adentrarse en las tradiciones y el modo de vida de los pueblos originarios de la Amazonía, ofreciendo una perspectiva única sobre la interacción entre el ser humano y la naturaleza en este entorno biodiverso.\n',
 
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aves/22.jpg",
+                "assets/AmazonasPh/aves/28.jpg",
+                "assets/AmazonasPh/aves/8.jpg",
               ],
             ),
             informativeSection(
@@ -108,9 +108,10 @@ class ComunidadMacedonia extends StatelessWidget {
                   '\n\n 3. Visitas a Plantaciones Tradicionales'
                   '\n\n 4. Intercambio Lingüístico y Educativo\n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aves/21.jpg",
+                "assets/AmazonasPh/aves/27.jpg",
+                "assets/AmazonasPh/aves/16.jpg",
+                'assets/AmazonasPh/aves/15.jpg',
               ],
             ),
             informativeSection(
@@ -127,15 +128,17 @@ class ComunidadMacedonia extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

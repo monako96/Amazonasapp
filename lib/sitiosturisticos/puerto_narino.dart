@@ -64,7 +64,7 @@ class PuertoNarino extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/puertonarino/27.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -92,9 +92,11 @@ class PuertoNarino extends StatelessWidget {
               content:
                   'Puerto Nariño se encuentra ubicado a orillas del río Loretoyacu, un afluente del Amazonas. Es reconocido por su arquitectura colorida y su estilo de vida enfocado en la armonía con la naturaleza. El municipio es un ejemplo de sostenibilidad, con iniciativas de manejo de residuos y proyectos de conservación de la flora y fauna locales. Los visitantes pueden disfrutar de caminatas por senderos ecológicos, avistamiento de aves, y la observación de la rica biodiversidad del área. Además, es posible visitar comunidades indígenas cercanas, donde se puede aprender sobre sus tradiciones y formas de vida.\n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                'assets/AmazonasPh/puertonarino/17.jpg',
+                'assets/AmazonasPh/puertonarino/26.jpg',
+                'assets/AmazonasPh/puertonarino/14.jpg',
+                'assets/AmazonasPh/puertonarino/3.jpg',
+                'assets/AmazonasPh/puertonarino/20.jpg',
               ],
             ),
             informativeSection(
@@ -110,9 +112,12 @@ class PuertoNarino extends StatelessWidget {
                   '\n\n 6. Eventos Culturales y Festivales'
                   '\n\n 7. Observación de Fauna y Flora \n\n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                'assets/AmazonasPh/puertonarino/8.jpg',
+                'assets/AmazonasPh/puertonarino/4.jpg',
+                'assets/AmazonasPh/puertonarino/19.jpg',
+                'assets/AmazonasPh/puertonarino/20.jpg',
+                'assets/AmazonasPh/puertonarino/11.jpg',
+                'assets/AmazonasPh/aves/21.jpg',
               ],
             ),
             informativeSection(
@@ -128,15 +133,17 @@ class PuertoNarino extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

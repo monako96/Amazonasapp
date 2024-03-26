@@ -63,7 +63,7 @@ class IslaMicos extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/aves/13.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -91,9 +91,11 @@ class IslaMicos extends StatelessWidget {
               content:
               'La Isla de los Micos es un destino popular entre aquellos que visitan la región amazónica cerca de Leticia, Colombia. Esta isla ofrece una experiencia única de interacción con la naturaleza y la vida silvestre, particularmente con los monos ardilla, conocidos por su curiosidad y amabilidad hacia los humanos.\n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                'assets/AmazonasPh/aves/23.jpg',
+                'assets/AmazonasPh/aves/24.jpg',
+                "assets/AmazonasPh/aves/37.jpg",
+                'assets/AmazonasPh/aves/38.jpg',
+                "assets/AmazonasPh/aves/8.jpg",
               ],
             ),
             informativeSection(
@@ -106,9 +108,11 @@ class IslaMicos extends StatelessWidget {
                   '\n\n 3. Fotografía de Vida Silvestre\n\n'
               'La Isla de los Micos se encuentra aproximadamente a 30 minutos en bote desde Leticia, dependiendo de las condiciones del río y del tipo de embarcación.\n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aves/39.jpg",
+                "assets/AmazonasPh/aves/13.jpg",
+                "assets/AmazonasPh/aves/14.jpg",
+                "assets/AmazonasPh/aves/17.jpg",
+                "assets/AmazonasPh/aves/16.jpg",
               ],
             ),
             informativeSection(
@@ -123,15 +127,17 @@ class IslaMicos extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

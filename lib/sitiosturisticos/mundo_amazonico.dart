@@ -63,7 +63,7 @@ class MundoAmazonico extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/aventurasenlaselva/1.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -91,9 +91,10 @@ class MundoAmazonico extends StatelessWidget {
               content:
               'es un destino educativo y recreativo situado cerca de Leticia, en la región amazónica de Colombia. Este parque ofrece a los visitantes la oportunidad de aprender sobre la rica biodiversidad del Amazonas, sus ecosistemas, y la importancia de la conservación ambiental a través de experiencias interactivas y didácticas. \n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                'assets/AmazonasPh/aventurasenlaselva/18.jpg',
+                "assets/AmazonasPh/aventurasenlaselva/14.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/17.jpg",
+                'assets/AmazonasPh/Rio/5.jpg',
               ],
             ),
             informativeSection(
@@ -107,9 +108,9 @@ class MundoAmazonico extends StatelessWidget {
                   '\n\n 5. Talleres y Charlas Educativas \n\n',
 
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/7.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/1.jpg",
+                "assets/AmazonasPh/aves/22.jpg",
               ],
             ),
             informativeSection(
@@ -126,15 +127,17 @@ class MundoAmazonico extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

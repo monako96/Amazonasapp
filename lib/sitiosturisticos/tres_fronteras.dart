@@ -126,8 +126,8 @@ class TresFronteras extends StatelessWidget {
             ),
             informativeSection(
               context,
-              title: "Cómo llegar",
-              content: 'Para llegar a las tres fronteras es muy fácil, solo pulsa en el botón.\n\n'
+              title: "Ubicación",
+              content: 'EL punto de encuentro para hacer el Tours tres frontera es por la avenida internacional en toda la frontera que divide a colombia con brasil.\n\n'
                   'Recomendación: cambiar divisas a reales brasileños (BRL) para realizar compras en Brasil y, sorprendentemente, también en Perú, cerca de las zonas fronterizas con Leticia\n',
               imagePaths: [],
             ),
@@ -137,15 +137,17 @@ class TresFronteras extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

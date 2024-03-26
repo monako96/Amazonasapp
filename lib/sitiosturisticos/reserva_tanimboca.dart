@@ -63,7 +63,7 @@ class ReservaTanimboca extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/Rio/5.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -91,9 +91,11 @@ class ReservaTanimboca extends StatelessWidget {
               content:
                 'se encuentra en las afueras de Leticia, Amazonas, Colombia, y es un destino destacado para quienes buscan aventuras en la selva amazónica. Ofrece una variedad de actividades enfocadas en la apreciación de la naturaleza y la aventura, en un entorno que promueve la conservación y el respeto por el ecosistema amazónico.\n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/12.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/14.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/10.jpg",
+                'assets/AmazonasPh/aventurasenlaselva/19.jpg',
+                'assets/AmazonasPh/aventurasenlaselva/7.jpg',
               ],
             ),
             informativeSection(
@@ -107,9 +109,10 @@ class ReservaTanimboca extends StatelessWidget {
                   '\n\n 4. Alojamiento en Cabañas en los Árboles'
                   '\n\n 5. Kayak y Navegación en Ríos \n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/18.jpg",
+                "assets/AmazonasPh/Rio/1.jpg",
+                "assets/AmazonasPh/Rio/2.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/15.jpg",
               ],
             ),
             informativeSection(
@@ -126,15 +129,17 @@ class ReservaTanimboca extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

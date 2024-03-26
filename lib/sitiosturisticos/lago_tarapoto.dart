@@ -50,7 +50,7 @@ class LagoTarapoto extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tres Fronteras'),
+        title: const Text('Lago Tarapoto'),
         backgroundColor: Color.fromARGB(255, 0, 59, 31),
         iconTheme: IconThemeData(
           color: Colors.white, // Cambia el color de la flecha de devolver aquí si es necesario
@@ -64,7 +64,7 @@ class LagoTarapoto extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/puertonarino/22.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -92,9 +92,12 @@ class LagoTarapoto extends StatelessWidget {
               content:
               'El Lago Tarapoto es una maravilla natural ubicada cerca de Puerto Nariño, en la región amazónica de Colombia. Este lago es famoso por su biodiversidad, especialmente por ser el hábitat de los delfines rosados y grises, y por su rica vegetación acuática y terrestre. La visita al Lago Tarapoto ofrece una experiencia única de ecoturismo y aventura, permitiendo a los visitantes conectar de cerca con la naturaleza virgen del Amazonas.\n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/Rio/3.jpg",
+                "assets/AmazonasPh/Rio/4.jpg",
+                "assets/AmazonasPh/aves/31.jpg",
+                "assets/AmazonasPh/Rio/7.jpg",
+                "assets/AmazonasPh/puertonarino/12.jpg",
+
               ],
             ),
             informativeSection(
@@ -109,9 +112,11 @@ class LagoTarapoto extends StatelessWidget {
                   '\n\n 5. Visitas a comunidades indígenas:'
                   '\n\n 6. Kayak y canotaje: \n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/Rio/9.jpg",
+                "assets/AmazonasPh/puertonarino/18.jpg",
+                "assets/AmazonasPh/puertonarino/19.jpg",
+                "assets/AmazonasPh/Rio/8.jpg",
+
               ],
             ),
             informativeSection(
@@ -130,15 +135,17 @@ class LagoTarapoto extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

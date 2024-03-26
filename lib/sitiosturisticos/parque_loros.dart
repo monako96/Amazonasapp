@@ -64,7 +64,7 @@ class Parqueloros extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/ParqueLoros/1.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -92,9 +92,11 @@ class Parqueloros extends StatelessWidget {
               content:
               'Ubicado en el centro de Leticia o también llamado parque Santander, este parque es un punto de encuentro tanto para locales como para turistas. Al atardecer, se convierte en un espectáculo natural cuando cientos de loros llegan para pasar la noche.\n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/ParqueLoros/2.jpg",
+                "assets/AmazonasPh/ParqueLoros/3.jpg",
+                "assets/AmazonasPh/ParqueLoros/4.jpg",
+                "assets/AmazonasPh/ParqueLoros/5.jpg",
+                "assets/AmazonasPh/ParqueLoros/6.jpg",
               ],
             ),
             informativeSection(
@@ -110,15 +112,17 @@ class Parqueloros extends StatelessWidget {
                   '\n\n 6. Eventos Culturales y Festivales'
                   '\n\n 7. Fotografía \n',
               imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/ParqueLoros/7.jpg",
+                "assets/AmazonasPh/ParqueLoros/8.jpg",
+                "assets/AmazonasPh/ParqueLoros/9.jpg",
+                "assets/AmazonasPh/ParqueLoros/1.jpg",
+
               ],
             ),
             informativeSection(
               context,
-              title: "Cómo llegar",
-              content: 'Para llegar al Parque de los Loros es muy fácil, solo pulsa en el botón.\n',
+              title: "Ubicación",
+              content: 'El parque de los loros queda en toda la parte centrar de Leticia amazonas, al frente de la iglesia central',
               imagePaths: [], // Si no hay imágenes para esta sección, deja la lista vacía
             ),
             Center(
@@ -127,15 +131,17 @@ class Parqueloros extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
+                    foregroundColor: Colors.white, // Color de las letras
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10.0),
+                      borderRadius: BorderRadius.circular(30.0),
                     ),
                   ),
                   child: const Text('Abrir en Google Maps'),
                 ),
               ),
-            ),
+            )
           ],
         ),
       ),

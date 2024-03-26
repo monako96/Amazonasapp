@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'navigation_bar.dart'; // Asegúrate de importar correctamente el NavigationScreen
+import 'navigation_bar.dart';
 
 class BienvenidScreen extends StatefulWidget {
   const BienvenidScreen({super.key});
@@ -37,7 +37,7 @@ class BienvenidScreenState extends State<BienvenidScreen> {
             height: double.infinity,
             alignment: Alignment.center,
           ),
-          // Aquí puedes agregar un indicador de carga si lo deseas
+
         ],
       ),
     );
