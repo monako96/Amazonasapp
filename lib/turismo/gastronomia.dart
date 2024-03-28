@@ -45,7 +45,7 @@ class GastronomiaAmazonas extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/aves/34.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -73,30 +73,29 @@ class GastronomiaAmazonas extends StatelessWidget {
               content:
                   'La gastronomía amazónica es un reflejo de la rica biodiversidad de la selva y las tradiciones culturales de sus pueblos indígenas y comunidades locales. Esta cocina se caracteriza por el uso de ingredientes frescos, exóticos y a menudo únicos de la región, ofreciendo sabores que no se encuentran en ninguna otra parte del mundo. \n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aves/32.jpg",
+                "assets/AmazonasPh/aves/33.jpg",
+                "assets/AmazonasPh/aves/34.jpg",
               ],
             ),
             informativeSection(
               context,
               title: "Platos principales",
               content:
-              'En Leticia, Amazonas, la gastronomía refleja la rica biodiversidad de la selva y la fusión de culturas indígenas, colombianas, brasileñas y peruanas. Aquí te presento algunos de los platos principales que puedes degustar en Leticia, ofreciendo una muestra de la rica paleta de sabores amazónicos:\n'
-                  '\n 1. Pescados de Río'
-                  '\n\n 2. chicharrón de pirarucú'
-                  '\n\n 3. beiju\n\n'
+              'En Leticia, Amazonas, la gastronomía refleja la rica biodiversidad de la selva y la fusión de culturas indígenas, colombianas, brasileñas y peruanas. Aquí te presento algunos de los platos principales que puedes degustar en Leticia, ofreciendo una muestra de la rica paleta de sabores amazónicos:\n\n'
+                  ' 1. Pescados de Río'
+                  ' 2. chicharrón de pirarucú\n\n'
+                  ' 3. beiju\n\n'
                   ' 3. Tacacho\n\n'
-                  '\n\n 3. beiju\n\n'
+                  ' 4. beiju\n\n'
+                  ' 5. Mojojoi\n\n'
 
 
                   'La Isla de los Micos se encuentra aproximadamente a 30 minutos en bote desde Leticia, dependiendo de las condiciones del río y del tipo de embarcación.\n',
               imagePaths: [
-                "assets/AmazonasPh/aves/39.jpg",
-                "assets/AmazonasPh/aves/13.jpg",
-                "assets/AmazonasPh/aves/14.jpg",
-                "assets/AmazonasPh/aves/17.jpg",
-                "assets/AmazonasPh/aves/16.jpg",
+                "assets/AmazonasPh/aves/35.jpg",
+                "assets/AmazonasPh/aves/36.jpg",
+                "assets/AmazonasPh/aves/26.jpg",
               ],
             ),
           ],

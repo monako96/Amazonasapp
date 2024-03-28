@@ -46,7 +46,7 @@ class RioAmazonas extends StatelessWidget {
               alignment: Alignment.center,
               children: [
                 Image.asset(
-                  'assets/paisajes/victoria.jpg',
+                  'assets/AmazonasPh/TresFronteras/1.jpg',
                   fit: BoxFit.cover,
                   height: 150,
                   width: MediaQuery.of(context).size.width,
@@ -70,64 +70,28 @@ class RioAmazonas extends StatelessWidget {
             const SizedBox(height: 20),
             informativeSection(
               context,
-              title: "Leticia - Amazonas",
+              title: "Tours por el Rio amazonas",
               content:
-                  'Leticia es la capital del departamento de Amazonas en Colombia, '
-                  'ubicada en la triple frontera entre Colombia, Perú y Brasil. '
-                  'Es conocida por ser una puerta de entrada al Amazonas, '
-                  'ofreciendo una gran variedad de actividades ecoturísticas, '
-                  'avistamiento de fauna y flora, y la oportunidad de experimentar '
-                  'las culturas indígenas locales.',
+                  'Los tours por el río Amazonas ofrecen una experiencia inmersiva única en una de las regiones más biodiversas del planeta. Estas aventuras varían desde paseos en canoa y avistamiento de vida silvestre, como los delfines rosados y monos, hasta la pesca de pirañas y caminatas por la selva para explorar la rica flora y fauna.\n\n',
               imagePaths: [
                 "assets/paisajes/indigenas.jpg",
                 "assets/paisajes/cultura.jpg",
                 "assets/paisajes/mono.jpg",
               ],
             ),
+
             informativeSection(
               context,
-              title: "Historia y Cultura",
+              title: "",
               content:
-                  "Explora la rica historia de Leticia y la diversidad cultural de sus pueblos indígenas. Descubre tradiciones ancestrales y la armonía con la naturaleza.",
-              imagePaths: [
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Biodiversidad",
-              content:
-                  "Admira la impresionante biodiversidad del Amazonas. Desde avistamiento de aves hasta encuentros cercanos con la fauna silvestre, Leticia es un paraíso para los amantes de la naturaleza.",
+                    ' Los visitantes también tienen la oportunidad de interactuar con comunidades indígenas, aprendiendo sobre sus tradiciones y modo de vida. Con opciones que van desde expediciones de un día hasta estancias más prolongadas en lodges en la selva, hay tours disponibles para todos los gustos y niveles de aventura, ofreciendo un acercamiento profundo a la naturaleza y cultura amazónicas.\n\n',
               imagePaths: [
                 "assets/paisajes/mono.jpg",
                 "assets/paisajes/pesca.jpg",
                 "assets/paisajes/rio.jpg",
               ],
             ),
-            informativeSection(
-              context,
-              title: "Actividades Turísticas",
-              content:
-                  "Desde caminatas ecológicas hasta cruceros por el río Amazonas, Leticia ofrece una amplia gama de actividades turísticas para aventureros y familias.",
-              imagePaths: [
-                "assets/paisajes/rio.jpg",
-                "assets/paisajes/pesca.jpg",
-                "assets/paisajes/indigenas.jpg",
-              ],
-            ),
-            informativeSection(
-              context,
-              title: "Consejos de Viaje",
-              content:
-                  "Prepárate para tu viaje a Leticia con consejos útiles sobre cómo llegar, qué llevar y cómo hacer de tu estancia una experiencia inolvidable.",
-              imagePaths: [
-                "assets/paisajes/choza.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/indigenas.jpg",
-              ],
-            ),
+
           ],
         ),
       ),
