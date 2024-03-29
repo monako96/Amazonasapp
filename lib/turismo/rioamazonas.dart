@@ -74,9 +74,9 @@ class RioAmazonas extends StatelessWidget {
               content:
                   'Los tours por el río Amazonas ofrecen una experiencia inmersiva única en una de las regiones más biodiversas del planeta. Estas aventuras varían desde paseos en canoa y avistamiento de vida silvestre, como los delfines rosados y monos, hasta la pesca de pirañas y caminatas por la selva para explorar la rica flora y fauna.\n\n',
               imagePaths: [
-                "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/cultura.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/Rio/11.jpg",
+                "assets/AmazonasPh/Rio/12.jpg",
+                "assets/AmazonasPh/Rio/7.jpg",
               ],
             ),
 
@@ -86,9 +86,9 @@ class RioAmazonas extends StatelessWidget {
               content:
                     ' Los visitantes también tienen la oportunidad de interactuar con comunidades indígenas, aprendiendo sobre sus tradiciones y modo de vida. Con opciones que van desde expediciones de un día hasta estancias más prolongadas en lodges en la selva, hay tours disponibles para todos los gustos y niveles de aventura, ofreciendo un acercamiento profundo a la naturaleza y cultura amazónicas.\n\n',
               imagePaths: [
-                "assets/paisajes/mono.jpg",
-                "assets/paisajes/pesca.jpg",
-                "assets/paisajes/rio.jpg",
+                "assets/AmazonasPh/puertonarino/7.jpg",
+                "assets/AmazonasPh/puertonarino/16.jpg",
+                "assets/AmazonasPh/puertonarino/18.jpg",
               ],
             ),
 

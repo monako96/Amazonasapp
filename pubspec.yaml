@@ -251,6 +251,28 @@ flutter:
     - assets/AmazonasPh/puertonarino/26.jpg
     - assets/AmazonasPh/puertonarino/27.jpg
 
+    #artesanias
+    - assets/AmazonasPh/artesanias/1.jpg
+    - assets/AmazonasPh/artesanias/2.jpg
+    - assets/AmazonasPh/artesanias/3.jpg
+    - assets/AmazonasPh/artesanias/4.jpg
+    - assets/AmazonasPh/artesanias/5.jpg
+    - assets/AmazonasPh/artesanias/6.jpg
+    - assets/AmazonasPh/artesanias/7.jpg
+    - assets/AmazonasPh/artesanias/8.jpg
+    - assets/AmazonasPh/artesanias/9.jpg
+    - assets/AmazonasPh/artesanias/10.jpg
+    - assets/AmazonasPh/artesanias/11.jpg
+    - assets/AmazonasPh/artesanias/12.jpg
+    - assets/AmazonasPh/artesanias/13.jpg
+
+      #turismo
+    - assets/AmazonasPh/portadas/t.png
+    - assets/AmazonasPh/portadas/c.png
+    - assets/AmazonasPh/portadas/e.png
+    - assets/AmazonasPh/portadas/h.png
+    - assets/AmazonasPh/portadas/a.png
+
 
 
 

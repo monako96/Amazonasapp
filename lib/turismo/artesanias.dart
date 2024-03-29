@@ -26,20 +26,20 @@ class ArtesaniaAmazonas extends StatelessWidget {
         mainAxisSpacing: 10,
         padding: const EdgeInsets.all(10),
         children: <Widget>[
-          _buildGridItem(context, 'assets/paisajes/mono.jpg', 'Sitio Turístico 1'),
-          _buildGridItem(context, 'assets/paisajes/brasil.jpg', 'Sitio Turístico 2'),
-          _buildGridItem(context, 'assets/paisajes/choza.jpg', 'Sitio Turístico 3'),
-          _buildGridItem(context, 'assets/paisajes/cultura.jpg', 'Sitio Turístico 4'),
-          _buildGridItem(context, 'assets/paisajes/indigenas.jpg', 'Sitio Turístico 5'),
-          _buildGridItem(context, 'assets/paisajes/pesca.jpg', 'Sitio Turístico 6'),
-          _buildGridItem(context, 'assets/paisajes/rio.jpg', 'Sitio Turístico 7'),
-          _buildGridItem(context, 'assets/paisajes/cultura.jpg', 'Sitio Turístico 8'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/10.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/2.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/3.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/4.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/5.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/6.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/7.jpg'),
+          _buildGridItem(context, 'assets/AmazonasPh/artesanias/8.jpg'),
         ],
       ),
     );
   }
 
-  Widget _buildGridItem(BuildContext context, String imagePath, String title) {
+  Widget _buildGridItem(BuildContext context, String imagePath) {
     return GestureDetector(
       onTap: () => _showFullScreenImage(context, imagePath),
       child: Card(
@@ -49,24 +49,25 @@ class ArtesaniaAmazonas extends StatelessWidget {
             Expanded(
               child: AspectRatio(
                 aspectRatio: 1.0,
-                child: Image.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30.0), // Ajusta el radio aquí
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                title,
-                textAlign: TextAlign.center,
-              ),
+              padding: const EdgeInsets.all(10.0),
+              // Añade cualquier otro widget aquí dentro del Padding si lo necesitas
             ),
           ],
         ),
       ),
     );
   }
+
 
   void _showFullScreenImage(BuildContext context, String imagePath) {
     Navigator.of(context).push(

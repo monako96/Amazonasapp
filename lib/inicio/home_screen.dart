@@ -82,31 +82,31 @@ class CategoriesSection extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           CategoryItem(
-            imagePath: 'assets/paisajes/brasil.jpg',
+            imagePath: 'assets/AmazonasPh/portadas/t.png',
             title: 'Turismo',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const SitiosTuris())),
           ),
           CategoryItem(
-            imagePath: 'assets/paisajes/cultura.jpg',
+            imagePath: 'assets/AmazonasPh/portadas/c.png',
             title: 'Cultura',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const CulturaTradiciones())),
           ),
           CategoryItem(
-            imagePath: 'assets/paisajes/pesca.jpg',
+            imagePath: 'assets/AmazonasPh/portadas/e.png',
             title: 'Eventos',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const EventosScreen())),
           ),
           CategoryItem(
-            imagePath: 'assets/paisajes/choza.jpg',
+            imagePath: 'assets/AmazonasPh/portadas/h.png',
             title: 'Hoteles',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const HotelesScreen())),
           ),
           CategoryItem(
-            imagePath: 'assets/paisajes/rio.jpg',
+            imagePath: 'assets/AmazonasPh/portadas/a.png',
             title: 'Actividades',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const TourismScreen())),
@@ -232,7 +232,7 @@ class CategoryGrid extends StatelessWidget {
       },
 
       {
-        "image": "assets/paisajes/victoria.jpg",
+        "image": 'assets/AmazonasPh/artesanias/13.jpg',
         "title": "Artesanías Locales",
         "onTap": () => Navigator.push(context,
             MaterialPageRoute(builder: (context) => const ArtesaniaAmazonas())),
