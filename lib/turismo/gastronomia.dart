@@ -83,7 +83,7 @@ class GastronomiaAmazonas extends StatelessWidget {
               title: "Platos principales",
               content:
               'En Leticia, Amazonas, la gastronomía refleja la rica biodiversidad de la selva y la fusión de culturas indígenas, colombianas, brasileñas y peruanas. Aquí te presento algunos de los platos principales que puedes degustar en Leticia, ofreciendo una muestra de la rica paleta de sabores amazónicos:\n\n'
-                  ' 1. Pescados de Río'
+                  ' 1. Pescados de Río\n\n'
                   ' 2. chicharrón de pirarucú\n\n'
                   ' 3. beiju\n\n'
                   ' 3. Tacacho\n\n'

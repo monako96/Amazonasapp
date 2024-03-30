@@ -10,7 +10,6 @@ import 'package:appamazonas/turismo/descubre_leticia_screen.dart';
 import 'package:appamazonas/turismo/aventura_selva.dart';
 import 'package:appamazonas/turismo/cultura_tradiciones.dart';
 import 'package:appamazonas/turismo/gastronomia.dart';
-
 import '../sitiosturisticos/sitios_turisticos.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -109,7 +108,7 @@ class CategoriesSection extends StatelessWidget {
             imagePath: 'assets/AmazonasPh/portadas/a.png',
             title: 'Actividades',
             onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const TourismScreen())),
+                MaterialPageRoute(builder: (context) => const ActividadesScreen())),
           ),
         ],
       ),
@@ -123,7 +122,7 @@ class CategoryItem extends StatelessWidget {
   final VoidCallback onTap;
 
   const CategoryItem({
-    super.key, // Aquí se hace el cambio recomendado
+    super.key,
     required this.imagePath,
     required this.title,
     required this.onTap,

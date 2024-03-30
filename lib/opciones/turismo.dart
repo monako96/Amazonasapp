@@ -1,66 +1,82 @@
 // turismo.dart
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-// turismo.dart
 import 'package:flutter/material.dart';
 
-class TourismScreen extends StatelessWidget {
-  const TourismScreen({super.key});
+class ActividadesScreen extends StatelessWidget {
+  const ActividadesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<Map<String, dynamic>> actividades = [
+      {
+        "nombre": "Navegación por el Río Amazonas",
+        "imagen": "assets/paisajes/rio.jpg",
+        "descripcion": "Explora la majestuosidad del río Amazonas en un recorrido en bote que te llevará por paisajes inolvidables y encuentros cercanos con la vida silvestre.",
+      },
+      {
+        "nombre": "Avistamiento de Fauna y Flora",
+        "imagen": "assets/paisajes/rio.jpg",
+        "descripcion": "Descubre la increíble biodiversidad del Amazonas. Observa especies exóticas de aves, mamíferos, reptiles y una impresionante variedad de plantas.",
+      },
+      {
+        "nombre": "Visita a Comunidades Indígenas",
+        "imagen": "assets/paisajes/rio.jpg",
+        "descripcion": "Conoce el modo de vida de las comunidades indígenas amazónicas. Aprende sobre sus tradiciones, cultura y relación con la naturaleza.",
+      },
+      {
+        "nombre": "Caminatas por la Selva",
+        "imagen": "assets/paisajes/rio.jpg",
+        "descripcion": "Aventúrate en caminatas guiadas por la selva amazónica. Explora senderos naturales y descubre los secretos que esconde este impresionante ecosistema.",
+      },
+      // Añade más actividades aquí según necesites
+    ];
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-          'Turismo en Leticia',
-          style: TextStyle(color: Colors.white),
-        ),
+        title: Text('Actividades en Leticia, Amazonas'),
         backgroundColor: Color.fromARGB(255, 0, 59, 31),
-        iconTheme: IconThemeData(
-          color: Colors.white,
-        ),
+          iconTheme: IconThemeData(
+            color: Colors
+                .white,
+          )
       ),
-      body: GridView.count(
-        crossAxisCount: 2,
-        childAspectRatio: 1.0,
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        padding: const EdgeInsets.all(10),
-        children: <Widget>[
-          _buildGridItem('assets/paisajes/mono.jpg', 'Sitio Turístico 1'),
-          _buildGridItem('assets/paisajes/brasil.jpg', 'Sitio Turístico 2'),
-          _buildGridItem('assets/paisajes/choza.jpg', 'Sitio Turístico 3'),
-          _buildGridItem('assets/paisajes/cultura.jpg', 'Sitio Turístico 4'),
-          _buildGridItem('assets/paisajes/indigenas.jpg', 'Sitio Turístico 5'),
-          _buildGridItem('assets/paisajes/pesca.jpg', 'Sitio Turístico 6'),
-          _buildGridItem('assets/paisajes/rio.jpg', 'Sitio Turístico 7'),
-          _buildGridItem('assets/paisajes/cultura.jpg', 'Sitio Turístico 8'),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildGridItem(String imagePath, String title) {
-    return Card(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Expanded(
-            child: AspectRatio(
-              aspectRatio: 1.0,
-              child: Image.asset(
-                imagePath,
-                fit: BoxFit.cover,
-              ),
+      body: ListView.builder(
+        itemCount: actividades.length,
+        itemBuilder: (context, index) {
+          return Card(
+            margin: EdgeInsets.all(10),
+            child: Column(
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0), // Bordes redondeados para la imagen
+                  child: Image.asset(
+                    actividades[index]["imagen"],
+                    width: double.infinity, // Hace que la imagen se expanda para ocupar todo el ancho disponible
+                    height: 200, // Altura fija para todas las imágenes
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(10),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        actividades[index]["nombre"],
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                        ),
+                      ),
+                      SizedBox(height: 10),
+                      Text(actividades[index]["descripcion"]),
+                    ],
+                  ),
+                ),
+              ],
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              title,
-              textAlign: TextAlign.center,
-            ),
-          ),
-        ],
+          );
+        },
       ),
     );
   }

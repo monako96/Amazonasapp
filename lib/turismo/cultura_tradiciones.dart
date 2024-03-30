@@ -94,7 +94,7 @@ class CulturaTradiciones extends StatelessWidget {
               imagePaths: [
                 "assets/paisajes/cultura.jpg",
                 "assets/paisajes/indigenas.jpg",
-                "assets/paisajes/mono.jpg",
+                "assets/AmazonasPh/aventurasenlaselva/20.jpg",
               ],
             ),
           ],
