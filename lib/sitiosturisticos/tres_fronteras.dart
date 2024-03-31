@@ -7,18 +7,11 @@ class TresFronteras extends StatelessWidget {
   const TresFronteras({super.key});
 
   Future<void> _launchGoogleMaps() async {
-    // Coordenadas del Parque Santander en Leticia.
-    const double latitude = -4.21933;
-    const double longitude = -69.935817;
-    // Intenta abrir en la aplicación Google Maps.
-    final Uri googleMapsSchemeUrl = Uri.parse("geo:$latitude,$longitude");
-    final Uri googleMapsWebUrl  =  Uri.parse("https://www.google.com/maps/search/?api=1&query=$latitude,$longitude");
+    // URL proporcionada para la ubicación específica en Google Maps
+    final Uri googleMapsUrl = Uri.parse("https://www.google.com/maps/place/Centro+de+Atenci%C3%B3n+Inmediata+(frontera)/@-4.2192419,-69.9360067,21z/data=!4m15!1m8!3m7!1s0x91f2f14c36488fbf:0xd9b14597a7c636c0!2sLeticia,+Amazonas!3b1!8m2!3d-4.203165!4d-69.935907!16zL20vMHN3ams!3m5!1s0x91f2f14618a8cc73:0x92c2663fec5e68cd!8m2!3d-4.2191769!4d-69.9356788!16s%2Fg%2F11c6q5ky5w?entry=ttu");
 
-    if (await canLaunchUrl(googleMapsSchemeUrl)) {
-      await launchUrl(googleMapsSchemeUrl);
-    } else if (await canLaunchUrl(googleMapsWebUrl)) {
-      // Si no se puede abrir en la app, intenta abrir en el navegador.
-      await canLaunchUrl(googleMapsWebUrl );
+    if (await canLaunchUrl(googleMapsUrl)) {
+      await launchUrl(googleMapsUrl);
     } else {
       throw 'No se pudo abrir el mapa.';
     }

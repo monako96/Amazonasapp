@@ -7,18 +7,11 @@ class PuertoNarino extends StatelessWidget {
   const PuertoNarino({super.key});
 
   Future<void> _launchGoogleMaps() async {
-    // Coordenadas del Parque Santander en Leticia.
-    const double latitude = -4.2078895;
-    const double longitude = -69.9446021;
-    // Intenta abrir en la aplicación Google Maps.
-    final Uri googleMapsSchemeUrl = Uri.parse("geo:$latitude,$longitude");
-    final Uri googleMapsWebUrl  =  Uri.parse("https://www.google.com/maps/search/?api=1&query=$latitude,$longitude");
+    // URL proporcionada para la ubicación específica en Google Maps
+    final Uri googleMapsUrl = Uri.parse("https://www.google.com/maps/place/Puerto+Narino,+Puerto+Nari%C3%B1o,+Amazonas/@-3.7900846,-70.359175,17z/data=!3m1!4b1!4m6!3m5!1s0x91f20bccc846966b:0x3392e96a72f11550!8m2!3d-3.7888675!4d-70.3556424!16zL20vMDYzc25k?entry=ttu");
 
-    if (await canLaunchUrl(googleMapsSchemeUrl)) {
-      await launchUrl(googleMapsSchemeUrl);
-    } else if (await canLaunchUrl(googleMapsWebUrl)) {
-      // Si no se puede abrir en la app, intenta abrir en el navegador.
-      await canLaunchUrl(googleMapsWebUrl );
+    if (await canLaunchUrl(googleMapsUrl)) {
+      await launchUrl(googleMapsUrl);
     } else {
       throw 'No se pudo abrir el mapa.';
     }

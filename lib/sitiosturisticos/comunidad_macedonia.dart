@@ -7,18 +7,11 @@ class ComunidadMacedonia extends StatelessWidget {
   const ComunidadMacedonia({super.key});
 
   Future<void> _launchGoogleMaps() async {
-    // Coordenadas del Parque Santander en Leticia.
-    const double latitude = -3.8874185;
-    const double longitude = -70.1996757;
-    // Intenta abrir en la aplicación Google Maps.
-    final Uri googleMapsSchemeUrl = Uri.parse("geo:$latitude,$longitude");
-    final Uri googleMapsWebUrl  =  Uri.parse("https://www.google.com/maps/search/?api=1&query=$latitude,$longitude");
+    // URL proporcionada para la ubicación específica en Google Maps
+    final Uri googleMapsUrl = Uri.parse("https://www.google.com/maps/place/Macedonia,+Leticia,+Amazonas/@-3.8874079,-70.1945258,16z/data=!3m1!4b1!4m6!3m5!1s0x91f26c3586213fc3:0x40b276914ce97194!8m2!3d-3.88332!4d-70.18805!16s%2Fg%2F1hhx9dszz?entry=ttu");
 
-    if (await canLaunchUrl(googleMapsSchemeUrl)) {
-      await launchUrl(googleMapsSchemeUrl);
-    } else if (await canLaunchUrl(googleMapsWebUrl)) {
-      // Si no se puede abrir en la app, intenta abrir en el navegador.
-      await canLaunchUrl(googleMapsWebUrl );
+    if (await canLaunchUrl(googleMapsUrl)) {
+      await launchUrl(googleMapsUrl);
     } else {
       throw 'No se pudo abrir el mapa.';
     }

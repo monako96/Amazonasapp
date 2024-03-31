@@ -7,18 +7,11 @@ class LagoTarapoto extends StatelessWidget {
   const LagoTarapoto({super.key});
 
   Future<void> _launchGoogleMaps() async {
-    // Coordenadas del Parque Santander en Leticia.
-    const double latitude = -4.2126354;
-    const double longitude = -69.9429974;
-// Intenta abrir en la aplicación Google Maps.
-    final Uri googleMapsSchemeUrl = Uri.parse("geo:$latitude,$longitude");
-    final Uri googleMapsWebUrl = Uri.parse("https://www.google.com/maps/search/?api=1&query=$latitude,$longitude");
+    // URL proporcionada para la ubicación específica en Google Maps
+    final Uri googleMapsUrl = Uri.parse("https://www.google.com/maps/place/Lago+Tarapoto/@-3.8029918,-70.4239169,17z/data=!3m1!4b1!4m6!3m5!1s0x91f20a85bb3ff979:0x40f5c78ef7bf8261!8m2!3d-3.8029972!4d-70.421342!16s%2Fg%2F11dzt3svjy?entry=ttu");
 
-    if (await canLaunchUrl(googleMapsSchemeUrl)) {
-      await launchUrl(googleMapsSchemeUrl);
-    } else if (await canLaunchUrl(googleMapsWebUrl)) {
-      // Si no se puede abrir en la app, intenta abrir en el navegador.
-      await canLaunchUrl(googleMapsWebUrl );
+    if (await canLaunchUrl(googleMapsUrl)) {
+      await launchUrl(googleMapsUrl);
     } else {
       throw 'No se pudo abrir el mapa.';
     }

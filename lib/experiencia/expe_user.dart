@@ -139,15 +139,20 @@ class _UserFeedbackScreenState extends State<UserFeedbackScreen> {
             style: TextStyle(color: Colors.white)),
         backgroundColor: const Color.fromARGB(255, 0, 59, 31),
       ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Tu opinión es importante para nosotros',
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
+        body: GestureDetector(
+            onTap: () {
+              // Oculta el teclado cuando se toca cualquier parte de la pantalla fuera de los campos de texto
+              FocusScope.of(context).unfocus();
+            },
+            child: SingleChildScrollView(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                  const Text(
+                  'Tu opinión es importante para nosotros',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
             const SizedBox(height: 20),
             RatingBar.builder(
               initialRating: _rating,
@@ -283,6 +288,7 @@ class _UserFeedbackScreenState extends State<UserFeedbackScreen> {
             ),
           ],
         ),
+            ),
       ),
     );
   }

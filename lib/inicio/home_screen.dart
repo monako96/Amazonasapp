@@ -5,7 +5,7 @@ import 'package:appamazonas/turismo/artesanias.dart';
 import 'package:appamazonas/turismo/rioamazonas.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:appamazonas/opciones/turismo.dart'; // Asegúrate de tener esta pantalla para la navegación
+//import 'package:appamazonas/opciones/turismo.dart'; // Asegúrate de tener esta pantalla para la navegación
 import 'package:appamazonas/turismo/descubre_leticia_screen.dart';
 import 'package:appamazonas/turismo/aventura_selva.dart';
 import 'package:appamazonas/turismo/cultura_tradiciones.dart';
@@ -19,13 +19,13 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Descubre Leticia, el corazón del Amazonas'),
+        title: const Text('Leticia - Amazonas'),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: const <Widget>[
             WelcomeBanner(),
-            SizedBox(height: 20),
+            SizedBox(height: 16),
             CategoriesSection(),
             FeaturedCarousel(),
             SizedBox(height: 20),
@@ -52,9 +52,9 @@ class WelcomeBanner extends StatelessWidget {
           width: MediaQuery.of(context).size.width,
         ),
         const Text(
-          'Bienvenidos al Amazonas',
+          '\nBienvenidos al Amazonas',
           style: TextStyle(
-            fontSize: 35,
+            fontSize: 30,
             color: Colors.white,
             shadows: [
               Shadow(
@@ -104,12 +104,12 @@ class CategoriesSection extends StatelessWidget {
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const HotelesScreen())),
           ),
-          CategoryItem(
-            imagePath: 'assets/AmazonasPh/portadas/a.png',
-            title: 'Actividades',
-            onTap: () => Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const ActividadesScreen())),
-          ),
+         // CategoryItem(
+           // imagePath: 'assets/AmazonasPh/portadas/a.png',
+          //  title: 'Actividades',
+          //  onTap: () => Navigator.push(context,
+//MaterialPageRoute(builder: (context) => const ActividadesScreen())),
+//),
         ],
       ),
     );
@@ -130,15 +130,22 @@ class CategoryItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Usa MediaQuery para determinar el tamaño del dispositivo
+    double screenWidth = MediaQuery.of(context).size.width;
+    // Ajusta el tamaño y el espaciado de los elementos basándote en el tamaño de la pantalla
+    double itemWidth = screenWidth / 4; // Ajusta este valor según necesites
+    double avatarRadius = screenWidth < 600 ? 30 : 40; // Ejemplo de ajuste para tablets y móviles
+
     return GestureDetector(
       onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.only(left: 29),
+      child: Container(
+        width: itemWidth,
+        padding: const EdgeInsets.symmetric(horizontal: 8), // Considera ajustar esto dinámicamente si es necesario
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             CircleAvatar(
-              radius: 30,
+              radius: avatarRadius,
               backgroundImage: AssetImage(imagePath),
             ),
             const SizedBox(height: 8),
@@ -146,8 +153,8 @@ class CategoryItem extends StatelessWidget {
               title,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  // fontWeight: FontWeight.bold, // Aplica negrilla al texto
-                  ),
+                //fontWeight: FontWeight.bold, // Aplica negrita al texto
+              ),
             ),
           ],
         ),

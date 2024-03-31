@@ -7,18 +7,11 @@ class MundoAmazonico extends StatelessWidget {
   const MundoAmazonico({super.key});
 
   Future<void> _launchGoogleMaps() async {
-    // Coordenadas del Parque Santander en Leticia.
-    const double latitude = -4.146705;
-    const double longitude = -69.930791;
-// Intenta abrir en la aplicación Google Maps.
-    final Uri googleMapsSchemeUrl = Uri.parse("geo:$latitude,$longitude");
-    final Uri googleMapsWebUrl = Uri.parse("https://www.google.com/maps/search/?api=1&query=$latitude,$longitude");
+    // URL proporcionada para la ubicación específica en Google Maps
+    final Uri googleMapsUrl = Uri.parse("https://www.google.com/maps/place/Parque+Mundo+Amaz%C3%B3nico/@-4.1466996,-69.9333659,17z/data=!3m1!4b1!4m6!3m5!1s0x91f2f63e1b455625:0x5e7e23275c8b804!8m2!3d-4.146705!4d-69.930791!16s%2Fg%2F1tdk67gk?entry=ttu");
 
-    if (await canLaunchUrl(googleMapsSchemeUrl)) {
-      await launchUrl(googleMapsSchemeUrl);
-    } else if (await canLaunchUrl(googleMapsWebUrl)) {
-      // Si no se puede abrir en la app, intenta abrir en el navegador.
-      await canLaunchUrl(googleMapsWebUrl );
+    if (await canLaunchUrl(googleMapsUrl)) {
+      await launchUrl(googleMapsUrl);
     } else {
       throw 'No se pudo abrir el mapa.';
     }
@@ -49,7 +42,7 @@ class MundoAmazonico extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Parque Ecológico Mundo Amazónico'),
+        title: const Text('Parque Mundo Amazónico'),
         backgroundColor: Color.fromARGB(255, 0, 59, 31),
         iconTheme: IconThemeData(
           color: Colors.white, // Cambia el color de la flecha de devolver aquí si es necesario

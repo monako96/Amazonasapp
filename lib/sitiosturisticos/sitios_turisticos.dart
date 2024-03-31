@@ -86,8 +86,8 @@ class SitiosTuris extends StatelessWidget {
                 title,
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontWeight: FontWeight.bold, // Hace el texto en negrita
-                  fontSize: 18, // Cambia el tamaño del texto a 18
+                 // fontWeight: FontWeight.bold, // Hace el texto en negrita
+                  fontSize: 16, // Cambia el tamaño del texto a 18
                 ),
               ),
             ),

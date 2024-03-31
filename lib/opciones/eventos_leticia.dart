@@ -10,18 +10,18 @@ class EventosScreen extends StatelessWidget {
     // Lista de eventos para mostrar
     final List<Map<String, dynamic>> eventos = [
       {
-        "nombre": "Festival de la Amazonía",
-        "fecha": "10-15 de octubre",
+        "nombre": "Festival de la Confraternidad Amazónica",
+        "fecha": "15 - 20 de julio",
         "descripcion":
-            "Un evento cultural que celebra la diversidad de la selva amazónica con música, danza y gastronomía local.",
-        "imagen": "assets/paisajes/indigenas.jpg",
+            "Este festival tiene lugar en la ciudad de Leticia y se realiza con el fin de dar a conocer la diversidad y similitudes de los pueblos del trapecio amazónico. Con actividades deportivas, musicales, culturales y recreativas, muestras gastronómicas, etc., los visitantes y lugareños se dan cita para disfrutar del folclor, las costumbres, tradiciones y vivencias del Amazonas.",
+        "imagen": "assets/AmazonasPh/TresFronteras/21.jpg",
       },
       {
-        "nombre": "Carnaval Amazónico",
-        "fecha": "20-22 de febrero",
+        "nombre": "Pirarucú de Oro",
+        "fecha": "Noviembre",
         "descripcion":
-            "Disfruta del carnaval más verde del mundo, con desfiles, disfraces y la alegría característica de la región.",
-        "imagen": "assets/paisajes/indigenas.jpg",
+            "Este festival se realiza generalmente a finales del mes de noviembre cada año y se ha establecido como un espacio en donde convergen las diferentes manifestaciones musicales y tradiciones de la cultura interamazónica. En el escenario convergen artistas, compositores, autores, e intérpretes de los diferentes ritmos amazónicos.",
+        "imagen": "assets/AmazonasPh/TresFronteras/5.jpg",
       },
       {
         "nombre": "Encuentro de Tribus Indígenas",

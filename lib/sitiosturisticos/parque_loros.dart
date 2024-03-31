@@ -7,18 +7,11 @@ class Parqueloros extends StatelessWidget {
   const Parqueloros({super.key});
 
   Future<void> _launchGoogleMaps() async {
-    // Coordenadas del Parque Santander en Leticia.
-    const double latitude = -4.2126354;
-    const double longitude = -69.9429974;
-    // Intenta abrir en la aplicación Google Maps.
-    final Uri googleMapsSchemeUrl = Uri.parse("geo:$latitude,$longitude");
-    final Uri googleMapsWebUrl = Uri.parse("https://www.google.com/maps/search/?api=1&query=$latitude,$longitude");
+    // URL proporcionada para la ubicación específica en Google Maps
+    final Uri googleMapsUrl = Uri.parse("https://www.google.com/maps/place/Parque+Santander/@-4.2119555,-69.9428655,18.5z/data=!4m6!3m5!1s0x91f2f14d89ec42f7:0x44779675c54374b6!8m2!3d-4.2126354!4d-69.9429974!16s%2Fg%2F1vwlq5qq?entry=ttu");
 
-    if (await canLaunchUrl(googleMapsSchemeUrl)) {
-      await launchUrl(googleMapsSchemeUrl);
-    } else if (await canLaunchUrl(googleMapsWebUrl)) {
-      // Si no se puede abrir en la app, intenta abrir en el navegador.
-      await launchUrl(googleMapsWebUrl);
+    if (await canLaunchUrl(googleMapsUrl)) {
+      await launchUrl(googleMapsUrl);
     } else {
       throw 'No se pudo abrir el mapa.';
     }
