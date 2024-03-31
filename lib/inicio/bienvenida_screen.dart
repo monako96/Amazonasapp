@@ -31,7 +31,7 @@ class BienvenidScreenState extends State<BienvenidScreen> {
         alignment: Alignment.center,
         children: [
           Image.asset(
-            'assets/images/pantalla.png', // Asegúrate de que la ruta de la imagen sea correcta
+            'assets/images/amazonas.gif', // Asegúrate de que la ruta de la imagen sea correcta
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
