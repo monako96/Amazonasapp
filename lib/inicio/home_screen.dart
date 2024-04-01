@@ -5,7 +5,6 @@ import 'package:appamazonas/turismo/artesanias.dart';
 import 'package:appamazonas/turismo/rioamazonas.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-//import 'package:appamazonas/opciones/turismo.dart'; // Asegúrate de tener esta pantalla para la navegación
 import 'package:appamazonas/turismo/descubre_leticia_screen.dart';
 import 'package:appamazonas/turismo/aventura_selva.dart';
 import 'package:appamazonas/turismo/cultura_tradiciones.dart';

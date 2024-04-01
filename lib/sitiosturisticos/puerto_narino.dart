@@ -65,7 +65,7 @@ class PuertoNarino extends StatelessWidget {
                 const Text(
                   'Bienvenidos al Amazonas',
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 30,
                     color: Colors.white,
                     shadows: [
                       Shadow(
