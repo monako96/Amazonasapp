@@ -64,7 +64,7 @@ class ReservaTanimboca extends StatelessWidget {
                 const Text(
                   'Bienvenidos al Amazonas',
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 25,
                     color: Colors.white,
                     shadows: [
                       Shadow(
@@ -77,7 +77,7 @@ class ReservaTanimboca extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             informativeSection(
               context,
               title: "Reserva Natural Tanimboca",
@@ -145,7 +145,7 @@ class ReservaTanimboca extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -167,7 +167,7 @@ class ReservaTanimboca extends StatelessWidget {
                 autoPlay: false,
                 aspectRatio: 16 / 9,
                 enableInfiniteScroll: false,
-                viewportFraction: 0.8,
+                viewportFraction: 0.8, // Usa todo el ancho del viewport
               ),
               items: imagePaths.map((imagePath) {
                 return Builder(
@@ -175,14 +175,17 @@ class ReservaTanimboca extends StatelessWidget {
                     return GestureDetector(
                       onTap: () => _showFullScreenImage(context, imagePath),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
+                        // Elimina el margen para que las imágenes ocupen todo el ancho posible
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.50),
-                              spreadRadius: 0.5,
-                              blurRadius: 5,
+                              color: Colors.black.withOpacity(0),
+                              spreadRadius: 0,
+                              blurRadius: 0,
                               offset: const Offset(0, 10),
                             ),
                           ],

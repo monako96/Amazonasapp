@@ -53,7 +53,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
                 const Text(
                   'Bienvenidos al Amazonas',
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 25,
                     color: Colors.white,
                     shadows: [
                       Shadow(
@@ -66,7 +66,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             informativeSection(
               context,
               title: "Leticia - Amazonas",
@@ -80,7 +80,6 @@ class DescubreLeticiaScreen extends StatelessWidget {
               imagePaths: [
                 'assets/AmazonasPh/TresFronteras/2.jpg',
                 'assets/AmazonasPh/aventurasenlaselva/3.jpg',
-                "assets/paisajes/indigenas.jpg",
                 'assets/AmazonasPh/aventurasenlaselva/1.jpg',
                 'assets/AmazonasPh/aventurasenlaselva/2.jpg',
 
@@ -90,9 +89,9 @@ class DescubreLeticiaScreen extends StatelessWidget {
               context,
               title: "Información General",
               content:
-                 'Ubicación: Leticia se encuentra en la triple frontera entre Colombia, Brasil y Perú, a orillas del río Amazonas.\n\n'
-                ' Población: Aproximadamente 54,927habitantes.\n\n'
-                'Clima: Tropical húmedo, con temperaturas promedio que varían entre 26°C y 30°C durante todo el año. La estación lluviosa es de diciembre a mayo, mientras que los meses más secos van de junio a noviembre.\n',
+                'Ubicación: Leticia se encuentra en la triple frontera entre Colombia, Brasil y Perú, a orillas del río Amazonas.\n\n'
+                'Población: Aproximadamente 54,927habitantes.\n\n'
+                'Clima: Tropical húmedo, con temperaturas promedio que varían entre 26°C y 30°C durante todo el año. La estación lluviosa es de diciembre a mayo, mientras que los meses más secos van de junio a noviembre.',
 
             ),
             informativeSection(
@@ -128,7 +127,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -150,7 +149,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
                 autoPlay: false,
                 aspectRatio: 16 / 9,
                 enableInfiniteScroll: false,
-                viewportFraction: 0.8,
+                viewportFraction: 0.8, // Usa todo el ancho del viewport
               ),
               items: imagePaths.map((imagePath) {
                 return Builder(
@@ -158,14 +157,17 @@ class DescubreLeticiaScreen extends StatelessWidget {
                     return GestureDetector(
                       onTap: () => _showFullScreenImage(context, imagePath),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
+                        // Elimina el margen para que las imágenes ocupen todo el ancho posible
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.50),
-                              spreadRadius: 0.5,
-                              blurRadius: 5,
+                              color: Colors.black.withOpacity(0),
+                              spreadRadius: 0,
+                              blurRadius: 0,
                               offset: const Offset(0, 10),
                             ),
                           ],

@@ -65,7 +65,7 @@ class PuertoNarino extends StatelessWidget {
                 const Text(
                   'Bienvenidos al Amazonas',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 25,
                     color: Colors.white,
                     shadows: [
                       Shadow(
@@ -78,17 +78,18 @@ class PuertoNarino extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             informativeSection(
               context,
               title: "Puerto Nariño",
               content:
                   'Puerto Nariño se encuentra ubicado a orillas del río Loretoyacu, un afluente del Amazonas. Es reconocido por su arquitectura colorida y su estilo de vida enfocado en la armonía con la naturaleza. El municipio es un ejemplo de sostenibilidad, con iniciativas de manejo de residuos y proyectos de conservación de la flora y fauna locales. Los visitantes pueden disfrutar de caminatas por senderos ecológicos, avistamiento de aves, y la observación de la rica biodiversidad del área. Además, es posible visitar comunidades indígenas cercanas, donde se puede aprender sobre sus tradiciones y formas de vida.\n',
               imagePaths: [
+                 'assets/AmazonasPh/portadas/28.jpeg',
                 'assets/AmazonasPh/puertonarino/17.jpg',
-                'assets/AmazonasPh/puertonarino/26.jpg',
+                'assets/AmazonasPh/portadas/29.jpeg',
                 'assets/AmazonasPh/puertonarino/14.jpg',
-                'assets/AmazonasPh/puertonarino/3.jpg',
+                'assets/AmazonasPh/portadas/30.jpeg',
                 'assets/AmazonasPh/puertonarino/20.jpg',
               ],
             ),
@@ -97,7 +98,7 @@ class PuertoNarino extends StatelessWidget {
               title: "Actividades",
               content:
               'Los tours a Puerto Nariño generalmente incluyen viajes en barco desde Leticia, lo cual permite a los visitantes disfrutar de la impresionante vista del río Amazonas y sus alrededores. Una vez en Puerto Nariño, los tours a menudo exploran el pueblo a pie, dada su pequeña extensión y la falta de vehículos. Las actividades comunes incluyen:\n'
-                  '\n\n 1. Visita al Mirador Naipata'
+                  '\n 1. Visita al Mirador Naipata'
                   '\n\n 2. Tour por el Lago Tarapoto'
                   '\n\n 3. Encuentro con Comunidades Indígenas'
                   '\n\n 4. Compras de Artesanías'
@@ -117,7 +118,7 @@ class PuertoNarino extends StatelessWidget {
               context,
               title: "Ubicación y Recomendación",
               content: 'Puerto Nariño es un destino ideal para aquellos interesados en el ecoturismo y en experiencias que promuevan la conciencia ambiental y cultural. \n'
-              '\n\n Recomendaciones: llevar ropa adecuada, Protección contra Insectos, Vacunas, Botiquín de Primeros Auxilios\n',
+              '\nRecomendaciones: llevar ropa adecuada, Protección contra Insectos, Vacunas, Botiquín de Primeros Auxilios\n',
               imagePaths: [],
             ),
             Center(
@@ -149,7 +150,7 @@ class PuertoNarino extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -171,7 +172,7 @@ class PuertoNarino extends StatelessWidget {
                 autoPlay: false,
                 aspectRatio: 16 / 9,
                 enableInfiniteScroll: false,
-                viewportFraction: 0.8,
+                viewportFraction: 0.8, // Usa todo el ancho del viewport
               ),
               items: imagePaths.map((imagePath) {
                 return Builder(
@@ -179,14 +180,17 @@ class PuertoNarino extends StatelessWidget {
                     return GestureDetector(
                       onTap: () => _showFullScreenImage(context, imagePath),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
+                        // Elimina el margen para que las imágenes ocupen todo el ancho posible
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.50),
-                              spreadRadius: 0.5,
-                              blurRadius: 5,
+                              color: Colors.black.withOpacity(0),
+                              spreadRadius: 0,
+                              blurRadius: 0,
                               offset: const Offset(0, 10),
                             ),
                           ],

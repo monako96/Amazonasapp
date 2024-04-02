@@ -73,7 +73,7 @@ class SitiosTuris extends StatelessWidget {
           children: <Widget>[
             Expanded(
               child: AspectRatio(
-                aspectRatio: 1.03,
+                aspectRatio: 1,
                 child: Image.asset(
                   imagePath,
                   fit: BoxFit.cover,
@@ -81,7 +81,7 @@ class SitiosTuris extends StatelessWidget {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.only(),
               child: Text(
                 title,
                 textAlign: TextAlign.center,

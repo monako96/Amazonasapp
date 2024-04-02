@@ -51,9 +51,9 @@ class CulturaTradiciones extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                 ),
                 const Text(
-                  'CULTURA AMAZONICAS',
+                  'Bienvenidos al Amazonas',
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 25,
                     color: Colors.white,
                     shadows: [
                       Shadow(
@@ -66,7 +66,7 @@ class CulturaTradiciones extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             informativeSection(
               context,
               title: 'Cultura y Tradicion',
@@ -74,7 +74,7 @@ class CulturaTradiciones extends StatelessWidget {
                   'Leticia es una ciudad multicultural, enriquecida por la unión de diversas culturas y '
                   'tradiciones debido a su ubicación en la triple frontera con Brasil y Perú. su gastronomía '
                   'fusiona sabores de la triple frontera, se celebran festivales donde comparten diversas '
-                  'culturas tanto tradicionales como locales.',
+                  'culturas tanto tradicionales como locales.\n',
               imagePaths: [
                 'assets/AmazonasPh/TresFronteras/19.jpg',
                 'assets/AmazonasPh/TresFronteras/2.jpg',
@@ -90,7 +90,7 @@ class CulturaTradiciones extends StatelessWidget {
               context,
               title: "Cultura Indígena",
               content:
-                  "Leticia destaca por su sorprendente diversidad étnica, reflejada en sus tradicionales bailes, ricos dialectos y una gastronomía única. Entre los dialectos más hablados se encuentran el Tikuna, Huitoto y Cocama. Sus bailes culturales, como el Yurupary, el Baile de Muñeco y el Baile de Chontaduro. En su gastronomía tenemos la fariña, el casabe, el tucupi, pescados y el mojojoy, destacando la riqueza culinaria de la región.",
+                  "Leticia destaca por su sorprendente diversidad étnica, reflejada en sus tradicionales bailes, ricos dialectos y una gastronomía única. Entre los dialectos más hablados se encuentran el Tikuna, Huitoto y Cocama. Sus bailes culturales, como el Yurupary, el Baile de Muñeco y el Baile de Chontaduro. En su gastronomía tenemos la fariña, el casabe, el tucupi, pescados y el mojojoy, destacando la riqueza culinaria de la región.\n",
               imagePaths: [
                 "assets/paisajes/cultura.jpg",
                 "assets/paisajes/indigenas.jpg",
@@ -109,7 +109,7 @@ class CulturaTradiciones extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -131,7 +131,7 @@ class CulturaTradiciones extends StatelessWidget {
                 autoPlay: false,
                 aspectRatio: 16 / 9,
                 enableInfiniteScroll: false,
-                viewportFraction: 0.8,
+                viewportFraction: 0.8, // Usa todo el ancho del viewport
               ),
               items: imagePaths.map((imagePath) {
                 return Builder(
@@ -139,14 +139,17 @@ class CulturaTradiciones extends StatelessWidget {
                     return GestureDetector(
                       onTap: () => _showFullScreenImage(context, imagePath),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
+                        // Elimina el margen para que las imágenes ocupen todo el ancho posible
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.black.withOpacity(0.50),
-                              spreadRadius: 0.5,
-                              blurRadius: 5,
+                              color: Colors.black.withOpacity(0),
+                              spreadRadius: 0,
+                              blurRadius: 0,
                               offset: const Offset(0, 10),
                             ),
                           ],

@@ -8,24 +8,27 @@ class GastronomiaAmazonas extends StatelessWidget {
   void _showFullScreenImage(BuildContext context, String imagePath) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (context) => Scaffold(
-          body: GestureDetector(
-            onTap: () => Navigator.of(context).pop(),
-            child: Center(
-              child: InteractiveViewer(
-                panEnabled: false, // Prevent panning
-                boundaryMargin: EdgeInsets.all(100),
-                minScale: 0.5,
-                maxScale: 2,
-                child: Image.asset(imagePath),
+        builder: (context) =>
+            Scaffold(
+              body: GestureDetector(
+                onTap: () => Navigator.of(context).pop(),
+                child: Center(
+                  child: InteractiveViewer(
+                    panEnabled: false,
+                    // Prevent panning
+                    boundaryMargin: EdgeInsets.all(100),
+                    minScale: 0.5,
+                    maxScale: 2,
+                    child: Image.asset(imagePath),
+                  ),
+                ),
               ),
+              backgroundColor: Colors.black,
             ),
-          ),
-          backgroundColor: Colors.black,
-        ),
       ),
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,12 +51,15 @@ class GastronomiaAmazonas extends StatelessWidget {
                   'assets/AmazonasPh/aves/34.jpg',
                   fit: BoxFit.cover,
                   height: 150,
-                  width: MediaQuery.of(context).size.width,
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width,
                 ),
                 const Text(
                   'Bienvenidos al Amazonas',
                   style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 25,
                     color: Colors.white,
                     shadows: [
                       Shadow(
@@ -66,12 +72,12 @@ class GastronomiaAmazonas extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 5),
             informativeSection(
               context,
               title: "Gastronomia Amazonica",
               content:
-                  'La gastronomía amazónica es un reflejo de la rica biodiversidad de la selva y las tradiciones culturales de sus pueblos indígenas y comunidades locales. Esta cocina se caracteriza por el uso de ingredientes frescos, exóticos y a menudo únicos de la región, ofreciendo sabores que no se encuentran en ninguna otra parte del mundo. \n',
+              'La gastronomía amazónica es un reflejo de la rica biodiversidad de la selva y las tradiciones culturales de sus pueblos indígenas y comunidades locales. Esta cocina se caracteriza por el uso de ingredientes frescos, exóticos y a menudo únicos de la región, ofreciendo sabores que no se encuentran en ninguna otra parte del mundo. \n',
               imagePaths: [
                 "assets/AmazonasPh/aves/32.jpg",
                 "assets/AmazonasPh/aves/33.jpg",
@@ -86,16 +92,15 @@ class GastronomiaAmazonas extends StatelessWidget {
                   ' 1. Pescados de Río\n\n'
                   ' 2. chicharrón de pirarucú\n\n'
                   ' 3. beiju\n\n'
-                  ' 3. Tacacho\n\n'
-                  ' 4. beiju\n\n'
+                  ' 4. Tacacho\n\n'
                   ' 5. Mojojoi\n\n'
-
-
                   'La Isla de los Micos se encuentra aproximadamente a 30 minutos en bote desde Leticia, dependiendo de las condiciones del río y del tipo de embarcación.\n',
               imagePaths: [
                 "assets/AmazonasPh/aves/35.jpg",
                 "assets/AmazonasPh/aves/36.jpg",
-                "assets/AmazonasPh/aves/26.jpg",
+                "assets/AmazonasPh/portadas/40.jpeg",
+                'assets/AmazonasPh/portadas/31.jpeg',
+
               ],
             ),
           ],
@@ -110,7 +115,7 @@ class GastronomiaAmazonas extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -132,7 +137,7 @@ class GastronomiaAmazonas extends StatelessWidget {
                 autoPlay: false,
                 aspectRatio: 16 / 9,
                 enableInfiniteScroll: false,
-                viewportFraction: 0.8,
+                viewportFraction: 0.8, // Usa todo el ancho del viewport
               ),
               items: imagePaths.map((imagePath) {
                 return Builder(
@@ -140,8 +145,11 @@ class GastronomiaAmazonas extends StatelessWidget {
                     return GestureDetector(
                       onTap: () => _showFullScreenImage(context, imagePath),
                       child: Container(
-                        width: MediaQuery.of(context).size.width,
-                        margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                        width: MediaQuery
+                            .of(context)
+                            .size
+                            .width,
+                        // Elimina el margen para que las imágenes ocupen todo el ancho posible
                         decoration: BoxDecoration(
                           boxShadow: [
                             BoxShadow(
