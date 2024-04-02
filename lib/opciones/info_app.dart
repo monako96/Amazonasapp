@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
@@ -8,8 +9,8 @@ class MoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Más'),
-        backgroundColor: Color.fromARGB(255, 0, 59, 31),
+        title: const Text('Más'),
+        backgroundColor: const Color.fromARGB(255, 0, 59, 31),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -18,51 +19,71 @@ class MoreScreen extends StatelessWidget {
             child: ListView(
               children: [
                 ExpansionTile(
-                  leading: Icon(Icons.contact_mail),
-                  title: Text('Información de contacto'),
+                  leading: const Icon(Icons.contact_mail),
+                  title: const Text('Información de contacto'),
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("Puedes contactarnos a través de:"),
-                          Text("Email: gregorio.cubeo@uniminuto.edu.co"),
-                          Text("Teléfono: +57 3202240985"),
-                          // Añade más información de contacto si es necesario
+                          const Text("Puedes contactarnos a través de:"),
+                          const Text("Email: gregorio.cubeo@uniminuto.edu.co"),
+                          const Text("Teléfono: +57 3202240985\n"),
+                          // Botón de WhatsApp
+                          ElevatedButton.icon(
+                            icon: const Icon(Icons.chat, color: Colors.green),
+                            label: const Text('Contactar por WhatsApp', style: TextStyle(color: Colors.black)), // Color del texto
+                            onPressed: () {
+                              // Capturamos el context en una variable local antes del gap asíncrono.
+                              final scaffoldMessenger = ScaffoldMessenger.of(context);
+
+                              final whatsappUrl = Uri.parse("https://wa.me/573202240985?text=Hola%2C%20me%20gustaría%20saber%20más%20información.");
+                              canLaunchUrl(whatsappUrl).then((canLaunch) {
+                                if (canLaunch) {
+                                  launchUrl(whatsappUrl);
+                                } else {
+                                  scaffoldMessenger.showSnackBar(
+                                    const SnackBar(
+                                      content: Text('No se pudo abrir WhatsApp'),
+                                    ),
+                                  );
+                                }
+                              });
+                            },
+                          ),
                         ],
                       ),
                     ),
                   ],
                 ),
                 ExpansionTile(
-                  leading: Icon(Icons.info_outline),
-                  title: Text('Acerca de la app'),
+                  leading: const Icon(Icons.info_outline),
+                  title: const Text('Acerca de la app'),
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text("Versión de la app: 1.0.0\n"),
-                          Text("Desarrollado por: Gregorio cubeo, Julian porras\n"
-                              "lugar:Villavicencio-Metas\n"
+                          Text("Desarrollado por: Gregorio Cubeo, Julian Porras\n"
+                              "Lugar: Villavicencio-Metas\n"
                               "Universidad Minuto de Dios"),
-                          // Añade más detalles acerca de la app
                         ],
                       ),
                     ),
                   ],
                 ),
                 ExpansionTile(
-                  leading: Icon(Icons.image),
-                  title: Text('Créditos de las Imágenes'),
+                  leading: const Icon(Icons.image),
+                  title: const Text('Créditos de las Imágenes'),
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Todas las imágenes utilizadas en [Nombre de la Aplicación] son propiedad de sus respectivos dueños y se utilizan bajo permiso. Los créditos de las imágenes son los siguientes:\n\n"
                                 "- Imágenes proporcionadas por Camilofilm Studio. Todos los derechos reservados.\n"
@@ -70,21 +91,20 @@ class MoreScreen extends StatelessWidget {
                                 "El uso de estas imágenes sin el consentimiento expreso de los propietarios está estrictamente prohibido.",
                             textAlign: TextAlign.justify,
                           ),
-                          // Añade más detalles o créditos de imágenes si es necesario
                         ],
                       ),
                     ),
                   ],
                 ),
                 ExpansionTile(
-                  leading: Icon(Icons.privacy_tip),
-                  title: Text('Política y privacidad'),
+                  leading: const Icon(Icons.privacy_tip),
+                  title: const Text('Política y privacidad'),
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             "Introducción\n\n"
                                 "En AMCOL TOURS, respetamos tu privacidad y estamos comprometidos con proteger la información personal que nos proporcionas. Esta política explica cómo usamos y protegemos tus datos al utilizar nuestra aplicación móvil.\n\n"
@@ -101,25 +121,22 @@ class MoreScreen extends StatelessWidget {
                                 "Cambios a Esta Política\n\n"
                                 "Podemos actualizar nuestra Política de Privacidad ocasionalmente. Te recomendamos revisar esta página periódicamente para cualquier cambio.\n\n"
                                 "Contacto\n\n"
-                                "Si tienes preguntas sobre esta política, contáctanos en gregorio.cubeo@uniminuto.edu.co. o al 3202240985 ",
+                                "Si tienes preguntas sobre esta política, contáctanos.",
                             textAlign: TextAlign.justify,
                           ),
-                          // Añade más detalles acerca de la app si es necesario
                         ],
                       ),
                     ),
                   ],
                 ),
-
               ],
             ),
           ),
-          // Logos en la parte inferior
           Padding(
             padding: const EdgeInsets.only(bottom: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
+              children: const [
                 CircleAvatar(
                   radius: 50,
                   backgroundImage: AssetImage('assets/images/amcol.png'),

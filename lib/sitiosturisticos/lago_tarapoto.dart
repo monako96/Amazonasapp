@@ -102,8 +102,8 @@ class LagoTarapoto extends StatelessWidget {
                   '\n\n 2. Avistamiento de delfines'
                   '\n\n 3. Pesca artesanal'
                   '\n\n 4. Caminatas ecológicas'
-                  '\n\n 5. Visitas a comunidades indígenas:'
-                  '\n\n 6. Kayak y canotaje: \n',
+                  '\n\n 5. Visitas a comunidades indígenas'
+                  '\n\n 6. Kayak y canotaje \n',
               imagePaths: [
                 "assets/AmazonasPh/Rio/9.jpg",
                 "assets/AmazonasPh/puertonarino/18.jpg",
@@ -128,8 +128,8 @@ class LagoTarapoto extends StatelessWidget {
                 child: ElevatedButton(
                   onPressed: _launchGoogleMaps,
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 0, 59, 31), // Color de fondo
-                    foregroundColor: Colors.white, // Color de las letras
+                    backgroundColor: Color.fromARGB(255, 0, 59, 31),
+                    foregroundColor: Colors.white,
                     elevation: 2,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0),

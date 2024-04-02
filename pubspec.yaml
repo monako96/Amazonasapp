@@ -38,9 +38,10 @@ dependencies:
   firebase_auth: ^4.17.5
   sign_in_button: ^3.2.0
   google_sign_in: ^6.2.1
+  #font_awesome_flutter: ^10.1.0
 
 
-  
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -279,6 +280,7 @@ flutter:
     - assets/AmazonasPh/portadas/31.jpeg
     - assets/AmazonasPh/portadas/40.jpeg
     - assets/AmazonasPh/portadas/41.jpeg
+    - assets/images/whatsapp.png
 
 
 
