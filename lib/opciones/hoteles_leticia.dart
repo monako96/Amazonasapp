@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HotelesScreen extends StatelessWidget {
   const HotelesScreen({super.key});
@@ -36,55 +37,81 @@ class HotelesScreen extends StatelessWidget {
         "telefono": "+57 654 321 0987",
         "direccion": "Leticia - Amazonas",
       },
-      // Añadir más hoteles aquí
-
+      // Añade más hoteles aquí
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Hoteles en Leticia'),
         backgroundColor: const Color.fromARGB(255, 0, 59, 31),
-        iconTheme: IconThemeData(
+        iconTheme:IconThemeData(
           color: Colors.white
-        ),
+        )
       ),
       body: ListView.builder(
         itemCount: hoteles.length,
         itemBuilder: (context, index) {
           return Card(
             margin: const EdgeInsets.all(10),
-            child: Row(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0), // Baja la posición de la imagen
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(20.0),
-                    child: Image.asset(
-                      hoteles[index]["imagen"],
-                      width: 120, // Ajusta este valor para cambiar el ancho de la imagen
-                      height: 100, // Ajusta este valor para cambiar la altura de la imagen
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          hoteles[index]["nombre"],
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(20.0),
+                        child: Image.asset(
+                          hoteles[index]["imagen"],
+                          width: 120,
+                          height: 100,
+                          fit: BoxFit.cover,
                         ),
-                        const SizedBox(height: 8),
-                        Text(hoteles[index]["descripcion"]),
-                        const SizedBox(height: 8),
-                        Text('📞 ${hoteles[index]["telefono"]}'),
-                        Text('📍 ${hoteles[index]["direccion"]}'),
-                      ],
+                      ),
                     ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              hoteles[index]["nombre"],
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                            ),
+                            const SizedBox(height: 8),
+                            Text(hoteles[index]["descripcion"]),
+                            const SizedBox(height: 8),
+                            Text('📞 ${hoteles[index]["telefono"]}'),
+                            Text('📍 ${hoteles[index]["direccion"]}'),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 90),                  child: ElevatedButton.icon(
+                    icon: const Icon(Icons.chat, color: Colors.green),
+                    label: const Text('Contactar por WhatsApp', style: TextStyle(color: Colors.black,fontSize: 12,)), // Color del texto
+                    onPressed: () {
+                      final scaffoldMessenger = ScaffoldMessenger.of(context);
+
+                      final whatsappUrl = Uri.parse("https://wa.me/${hoteles[index]["telefono"]?.replaceAll(' ', '').replaceAll('+', '')}?text=Hola%2C%20me%20gustaría%20saber%20más%20información.");
+                      canLaunchUrl(whatsappUrl).then((canLaunch) {
+                        if (canLaunch) {
+                          launchUrl(whatsappUrl);
+                        } else {
+                          scaffoldMessenger.showSnackBar(
+                            const SnackBar(
+                              content: Text('No se pudo abrir WhatsApp'),
+                            ),
+                          );
+                        }
+                      });
+                    },
                   ),
                 ),
               ],

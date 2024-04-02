@@ -38,7 +38,7 @@ class MoreScreen extends StatelessWidget {
                               // Capturamos el context en una variable local antes del gap asíncrono.
                               final scaffoldMessenger = ScaffoldMessenger.of(context);
 
-                              final whatsappUrl = Uri.parse("https://wa.me/573202240985?text=Hola%2C%20me%20gustaría%20saber%20más%20información.");
+                              final whatsappUrl = Uri.parse("https://wa.me/573202240985?text=Hola%2C%20me%20gustaría%20saber%20más%20información%sobre%la%App%de%Turismo.");
                               canLaunchUrl(whatsappUrl).then((canLaunch) {
                                 if (canLaunch) {
                                   launchUrl(whatsappUrl);
