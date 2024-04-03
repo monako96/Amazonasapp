@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+import 'package:appamazonas/experiencia/registro_user.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+
+
 
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
@@ -52,6 +56,16 @@ class MoreScreen extends StatelessWidget {
                               });
                             },
                           ),
+                          const SizedBox(height: 16),
+                      ElevatedButton.icon(
+                        icon: const Icon(Icons.app_registration, color: Colors.green),
+                        label: const Text('Registrarse para más información', style: TextStyle(color: Colors.black)), // Color del texto
+                        onPressed: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (BuildContext context) => RegisterScreen()), // Asegúrate de que RegisterScreen esté importado
+                          );
+                        },
+                      ),
                         ],
                       ),
                     ),
@@ -129,6 +143,7 @@ class MoreScreen extends StatelessWidget {
                     ),
                   ],
                 ),
+
               ],
             ),
           ),
