@@ -105,9 +105,10 @@ class Parqueloros extends StatelessWidget {
                   '\n\n 6. Eventos Culturales y Festivales'
                   '\n\n 7. Fotografía \n',
               imagePaths: [
-                "assets/AmazonasPh/ParqueLoros/7.jpg",
+
                 "assets/AmazonasPh/ParqueLoros/8.jpg",
                 "assets/AmazonasPh/ParqueLoros/9.jpg",
+                "assets/AmazonasPh/ParqueLoros/7.jpg",
                 "assets/AmazonasPh/ParqueLoros/1.jpg",
 
               ],
@@ -147,7 +148,7 @@ class Parqueloros extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
