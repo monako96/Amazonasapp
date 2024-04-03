@@ -83,7 +83,7 @@ class PuertoNarino extends StatelessWidget {
               context,
               title: "Puerto Nariño",
               content:
-                  'Puerto Nariño se encuentra ubicado a orillas del río Loretoyacu, un afluente del Amazonas. Es reconocido por su arquitectura colorida y su estilo de vida enfocado en la armonía con la naturaleza. El municipio es un ejemplo de sostenibilidad, con iniciativas de manejo de residuos y proyectos de conservación de la flora y fauna locales. Los visitantes pueden disfrutar de caminatas por senderos ecológicos, avistamiento de aves, y la observación de la rica biodiversidad del área. Además, es posible visitar comunidades indígenas cercanas, donde se puede aprender sobre sus tradiciones y formas de vida.\n',
+                  'Puerto Nariño se encuentra ubicado a orillas del río Loretoyacu, un afluente del Amazonas. Es reconocido por su arquitectura colorida y su estilo de vida enfocado en la armonía con la naturaleza. El municipio es un ejemplo de sostenibilidad, con iniciativas de manejo de residuos y proyectos de conservación de la flora y fauna locales.\n',
               imagePaths: [
                  'assets/AmazonasPh/portadas/28.jpeg',
                 'assets/AmazonasPh/puertonarino/17.jpg',
@@ -150,7 +150,7 @@ class PuertoNarino extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -170,6 +170,7 @@ class RegisterScreenState extends State<RegisterScreen> {
                     // Todos los campos han pasado la validación
                     _formKey.currentState!.save();
                     enviarDatos();
+
                   }
                 },
                 child: const Text('Enviar'),

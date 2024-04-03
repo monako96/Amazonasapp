@@ -90,7 +90,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
               title: "Información General",
               content:
                 'Ubicación: Leticia se encuentra en la triple frontera entre Colombia, Brasil y Perú, a orillas del río Amazonas.\n\n'
-                'Población: Aproximadamente 54,927habitantes.\n\n'
+                'Población: Aproximadamente 54,927 habitantes.\n\n'
                 'Clima: Tropical húmedo, con temperaturas promedio que varían entre 26°C y 30°C durante todo el año. La estación lluviosa es de diciembre a mayo, mientras que los meses más secos van de junio a noviembre.',
 
             ),
@@ -127,7 +127,7 @@ class DescubreLeticiaScreen extends StatelessWidget {
     List<String> imagePaths = const [],
   }) {
     return Padding(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -80,25 +80,25 @@ class CategoriesSection extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         children: <Widget>[
           CategoryItem(
-            imagePath: 'assets/AmazonasPh/portadas/t.png',
+            imagePath: 'assets/AmazonasPh/TresFronteras/8.jpg',
             title: 'Turismo',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const SitiosTuris())),
           ),
           CategoryItem(
-            imagePath: 'assets/AmazonasPh/portadas/c.png',
+            imagePath: 'assets/paisajes/cultura.jpg',
             title: 'Cultura',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const CulturaTradiciones())),
           ),
           CategoryItem(
-            imagePath: 'assets/AmazonasPh/portadas/e.png',
+            imagePath: 'assets/AmazonasPh/TresFronteras/21.jpg',
             title: 'Eventos',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const EventosScreen())),
           ),
           CategoryItem(
-            imagePath: 'assets/AmazonasPh/portadas/h.png',
+            imagePath: 'assets/AmazonasPh/aventurasenlaselva/10.jpg',
             title: 'Hoteles',
             onTap: () => Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const HotelesScreen())),

@@ -28,7 +28,7 @@
     </content>
     <content url="file://$MODULE_DIR$/../../../build/url_launcher_android/generated/renderscript_source_output_dir/debug/out" />
     <content url="file://$MODULE_DIR$/../../../build/url_launcher_android/generated/res/resValues/debug">
-      <sourceFolder url="file://$MODULE_DIR$/../../../build/url_launcher_android/generated/res/resValues/debug" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../build/url_launcher_android/generated/res/resValues/debug" type="java-resource" generated="true" />
     </content>
     <content url="file://$MODULE_DIR$/../../../build/url_launcher_android/generated/res/rs/debug" />
     <content url="file://$MODULE_DIR$/../../../build/url_launcher_android/generated/source/buildConfig/debug">
