@@ -42,5 +42,6 @@ Formulario para que los usuarios dejen sus datos y reciban información futura.
 - **Google Maps**: Mapas y rutas.
 - **WhatsApp API**: Comunicación directa.
 
-##Contacto
+Contacto
+
 Preguntas o colaboraciones: gregorio.cubeo@uniminuto.edu.co o grego96cubeo@gmail.com
