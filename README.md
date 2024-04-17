@@ -39,7 +39,7 @@ Formulario para que los usuarios dejen sus datos y reciban información futura.
 
 - **Flutter**: Desarrollo de interfaces de usuario para iOS y Android.
 - **Firebase**: Autenticación y almacenamiento de datos.
-- ** Google Maps**: Mapas y rutas.
+- **Google Maps**: Mapas y rutas.
 - **WhatsApp API**: Comunicación directa.
 
 ##Contacto
