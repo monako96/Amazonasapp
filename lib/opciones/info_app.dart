@@ -9,6 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 class MoreScreen extends StatelessWidget {
   const MoreScreen({super.key});
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,7 @@ class MoreScreen extends StatelessWidget {
             child: ListView(
               children: [
                 ExpansionTile(
-                  leading: const Icon(Icons.contact_mail),
+                  leading: const Icon(Icons.contact_mail, color: Color.fromARGB(255, 0, 59, 31),),
                   title: const Text('Información de contacto'),
                   children: <Widget>[
                     Padding(
@@ -39,7 +40,6 @@ class MoreScreen extends StatelessWidget {
                             icon: const Icon(Icons.chat, color: Colors.green),
                             label: const Text('Contactar por WhatsApp', style: TextStyle(color: Colors.black)), // Color del texto
                             onPressed: () {
-                              // Capturamos el context en una variable local antes del gap asíncrono.
                               final scaffoldMessenger = ScaffoldMessenger.of(context);
 
                               final whatsappUrl = Uri.parse("https://wa.me/573202240985?text=Hola%2C%20me%20gustaría%20saber%20más%20información%sobre%la%App%de%Turismo.");
@@ -72,7 +72,7 @@ class MoreScreen extends StatelessWidget {
                   ],
                 ),
                 ExpansionTile(
-                  leading: const Icon(Icons.info_outline),
+                  leading: const Icon(Icons.info_outline, color: Color.fromARGB(255, 0, 59, 31),),
                   title: const Text('Acerca de la app'),
                   children: <Widget>[
                     Padding(
@@ -90,7 +90,7 @@ class MoreScreen extends StatelessWidget {
                   ],
                 ),
                 ExpansionTile(
-                  leading: const Icon(Icons.image),
+                  leading: const Icon(Icons.image, color: Color.fromARGB(255, 0, 59, 31),),
                   title: const Text('Créditos de las Imágenes'),
                   children: <Widget>[
                     Padding(
@@ -111,7 +111,7 @@ class MoreScreen extends StatelessWidget {
                   ],
                 ),
                 ExpansionTile(
-                  leading: const Icon(Icons.privacy_tip),
+                  leading: const Icon(Icons.privacy_tip, color: Color.fromARGB(255, 0, 59, 31),),
                   title: const Text('Política y privacidad'),
                   children: <Widget>[
                     Padding(
