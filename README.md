@@ -1,4 +1,4 @@
-## App móvil para nformación de sitios turísticos en el Municipio de Leticia - Amazonas.
+## App móvil para información de sitios turísticos en el Municipio de Leticia - Amazonas.
 
 
 Esta aplicación móvil, desarrollada en Flutter, es una guía completa para explorar el Municipio de Leticia, Amazonas. Ofrece información detallada sobre los principales sitios turísticos y funcionalidades interactivas para mejorar la experiencia de los visitantes.
